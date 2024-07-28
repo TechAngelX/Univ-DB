@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Login Page</title>
 </head>
 <body>
-<h2>Login</h2>
+<h1>Login</h1>
 <form action="login" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <input type="submit" value="Login">
+    Email: <input type="text" name="email" required /><br>
+    Password: <input type="password" name="password" required /><br>
+    <input type="submit" value="Login" />
 </form>
-<p>${param.error}</p>
+<% if (request.getParameter("error") != null) { %>
+<p style="color: red;">Invalid email or password</p>
+<% } %>
+<% if (request.getParameter("message") != null) { %>
+<p style="color: green;">Registration successful. Please login.</p>
+<% } %>
 </body>
 </html>

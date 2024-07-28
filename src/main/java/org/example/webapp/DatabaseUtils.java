@@ -5,14 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseUtils {
-    private static final String HOST = System.getenv("DB_HOST");
-    private static final String PORT = System.getenv("DB_PORT");
-    private static final String DBNAME = System.getenv("DB_NAME");
-    private static final String USERNAME = System.getenv("DB_USERNAME");
-    private static final String PASSWORD = System.getenv("DB_PASSWORD");
+    private static final String URL = "jdbc:oracle:thin:@localhost:1521/xe";
+    private static final String USER = "system";
+    private static final String PASSWORD = "duda123";
 
     public static Connection getConnection() throws SQLException {
-        String jdbcUrl = "jdbc:oracle:thin:@" + HOST + ":" + PORT + ":" + DBNAME;
-        return DriverManager.getConnection(jdbcUrl, USERNAME, PASSWORD);
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }
