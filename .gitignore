@@ -5,6 +5,10 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
+#Docker Files
+Dockerfile
+docker-compose.yml
+
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
