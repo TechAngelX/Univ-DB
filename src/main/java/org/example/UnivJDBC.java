@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class SimpleLoginJDBC {
+public class UnivJDBC {
     // Database connection details
     private static final String HOST = "localhost";
     private static final String PORT = "1521";
