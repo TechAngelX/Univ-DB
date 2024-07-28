@@ -1,9 +1,15 @@
-# SimpleLogin: A Full-Stack Demonstration
+# Univ-DB: A simple Staff / Student University Portal Login System.
 
 <img src="images/screenshot1.png" style="border: 5px solid #ccc;">
 
 
-SimpleLogin is a web application designed to showcase my full-stack development capabilities. It provides a user-friendly platform for managing login credentials securely.
+Univ-DB is a simple web application that simulates a university portal login system, designed to showcase my full-stack development capabilities. It provides a user-friendly platform for securely managing login credentials. The application leverages several key technologies:
+It provides a user-friendly platform for securely managing login credentials. The application leverages several key technologies:
+
+- Oracle-XE Database: Deployed as a Docker container, providing a robust and scalable database solution.
+- Apache Tomcat: Used as the application server, also deployed within a Docker container for seamless integration and deployment.
+- JDBC: Utilized for database connectivity, built using Maven on IntelliJ IDEA to ensure efficient development and dependency management.
+
 
 Clean and Simple: No bells and whistles, no fancy js. Just a basic structure for creating a login page. This is designed as a learning tool.
 
