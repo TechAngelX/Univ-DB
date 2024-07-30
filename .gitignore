@@ -94,6 +94,8 @@ nbdist/
 /dataSources/
 /dataSources.local.xml
 
+# Private file for sensitive information
+.env
 # macOS system files
 .DS_Store
 .AppleDouble
