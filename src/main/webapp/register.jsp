@@ -34,7 +34,7 @@
     <div class="form-box">
         <h1 class="text-center">Register</h1>
         <p class="text-center">Please complete the form to create an account</p>
-        <form action="register.jsp" method="post" onsubmit="return validateForm()">
+        <form action="registerServlet" method="post" onsubmit="return validateForm()">
             <!-- First Name field -->
             <div class="form-group">
                 <label for="fName"><strong>First Name:</strong></label>
@@ -46,9 +46,6 @@
                 <label for="lName"><strong>Last Name:</strong></label>
                 <input class="form-control" type="text" name="lName" id="lName" required placeholder="Enter your last name">
             </div>
-
-            String username = fName.toLowerCase().charAt(0) + lName.substring(Math.max(0, lName.length() - 7)).toLowerCase()+;
-            // TODO -  check this username in database. if it exists, username = username +1
 
             <!-- Email Address field -->
             <div class="form-group">
@@ -69,12 +66,6 @@
                 </div>
             </div>
             <p id="password-mismatch-error" class="text-danger"></p>
-
-            <!-- Role ID field -->
-            <div class="form-group">
-                <label for="role_id"><strong>Role ID:</strong></label>
-                <input class="form-control" type="number" name="role_id" id="role_id" required placeholder="Enter your role ID">
-            </div>
 
             <!-- Sign Up button -->
             <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
@@ -115,28 +106,6 @@
         // If everything is valid
         return true;
     }
-    // Prepare SQL statement
-    $sql = "INSERT INTO SYSTEM.USER_ACCOUNT (FNAME, LNAME,  EMAIL) VALUES (?, ?, ?)"; // Here, these must correspond to the database field names.
-    $stmtInsert = $pdo->prepare($sql);
-
-    // Execute the prepared statement
-    $result = $stmtInsert->execute([$username, $password, $email]);// Not the fields from your database.
-
-    // Check if the user was submitted successfully
-    if ($result) {
-        $_SESSION['username'] = $username; // Set the session variable
-        header("Location: session.php"); // Redirect to session.php
-        exit();
-        // echo  "User Submitted:  " . $username . " " . $password . " " . $email;
-    } else {
-        echo "Error: Unable to submit user."; // Display error message
-    }
-    }
-
-    // Generate a random validation code
-    $validationCode = substr(md5(uniqid(mt_rand(), true)), 0, 8);
-
-
 </script>
 </body>
 </html>
