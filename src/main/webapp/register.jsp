@@ -1,8 +1,8 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Registration | Uni-DB</title>
+    <title>User Registration | Univ-DB</title>
     <!-- Include Bootstrap CSS for styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -35,24 +35,20 @@
         <h1 class="text-center">Register</h1>
         <p class="text-center">Please complete the form to create an account</p>
         <form action="registerServlet" method="post" onsubmit="return validateForm()">
+
             <!-- First Name field -->
-            <div class="form-group">
-                <label for="fName"><strong>First Name:</strong></label>
-                <input class="form-control" type="text" name="fName" id="fName" required placeholder="Enter your first name">
-            </div>
-
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fName"><strong>First Name:</strong></label>
+                    <input class="form-control" type="text" name="fName" id="fName" required placeholder="Enter your first name">
+                </div>
             <!-- Last Name field -->
-            <div class="form-group">
-                <label for="lName"><strong>Last Name:</strong></label>
-                <input class="form-control" type="text" name="lName" id="lName" required placeholder="Enter your last name">
+                <div class="form-group col-md-6">
+                    <label for="lName"><strong>Last Name:</strong></label>
+                    <input class="form-control" type="text" name="lName" id="lName" required placeholder="Enter your last name">
+                </div>
             </div>
 
-            <!-- Email Address field -->
-            <div class="form-group">
-                <label for="email"><strong>Email:</strong></label>
-                <input class="form-control" type="email" name="email" id="email" required placeholder="Enter your email address">
-                <p id="email-validation-error" class="text-danger"></p>
-            </div>
 
             <!-- Password field -->
             <div class="form-row">
@@ -66,6 +62,14 @@
                 </div>
             </div>
             <p id="password-mismatch-error" class="text-danger"></p>
+            <!-- Email Address field -->
+            <div class="form-group">
+                <label for="email"><strong>Email:</strong></label>
+                <input class="form-control" type="email" name="email" id="email" required placeholder="Enter your email address">
+                <p id="email-validation-error" class="text-danger"></p>
+            </div>
+
+            <!-- Passw
 
             <!-- Sign Up button -->
             <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
