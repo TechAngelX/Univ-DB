@@ -86,6 +86,7 @@ nbdist/
 # Default ignored files
 /shelf/
 .workspace.xml
+rmwar.sh
 
 # Editor-based HTTP Client requests
 /httpRequests/
