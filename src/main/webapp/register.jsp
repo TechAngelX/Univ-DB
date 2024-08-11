@@ -31,32 +31,31 @@
 <body>
 <div class="container form-container">
     <div class="form-box">
-        <h1 class="text-center">Register</h1> <!-- Corrected heading tag -->
+        <h1 class="text-center">Register</h1>
         <p class="text-center">Please complete the form to create an account</p>
-        <form action="register" method="post" onsubmit="return validateForm()">
-
+        <form action="${pageContext.request.contextPath}/UnivDB/register" method="post" onsubmit="return validateForm()">
             <!-- First Name field -->
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="fName"><strong>First Name:</strong></label>
-                    <input class="form-control" type="text" name="fName" id="fName" required placeholder="Enter your first name">
+                    <label for="fname"><strong>First Name:</strong></label>
+                    <input class="form-control" type="text" name="fname" id="fname" required placeholder="Enter your first name">
                 </div>
                 <!-- Last Name field -->
                 <div class="form-group col-md-6">
-                    <label for="lName"><strong>Last Name:</strong></label>
-                    <input class="form-control" type="text" name="lName" id="lName" required placeholder="Enter your last name">
+                    <label for="lname"><strong>Last Name:</strong></label>
+                    <input class="form-control" type="text" name="lname" id="lname" required placeholder="Enter your last name">
                 </div>
             </div>
 
             <!-- Password field -->
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="pWord"><strong>Password:</strong></label>
-                    <input class="form-control" type="password" name="password" id="pWord" required placeholder="Enter your password">
+                    <label for="pword"><strong>Password:</strong></label>
+                    <input class="form-control" type="password" name="password" id="pword" required placeholder="Enter your password">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="pword-confirm"><strong>Confirm Password:</strong></label>
-                    <input class="form-control" type="password" name="pword-confirm" id="pword-confirm" required placeholder="Confirm your password">
+                    <label for="pwordConfirm"><strong>Confirm Password:</strong></label>
+                    <input class="form-control" type="password" name="pwordConfirm" id="pwordConfirm" required placeholder="Confirm your password">
                 </div>
             </div>
 
@@ -83,32 +82,32 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<%--<script>--%>
-<%--    function validateForm() {--%>
-<%--        var password = $("#pWord").val();--%>
-<%--        var confirmPassword = $("#password-confirm").val();--%>
-<%--        var email = $("#email").val();--%>
-<%--        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;--%>
+<script>
+    function validateForm() {
+        var password = $("#pword").val();
+        var confirmPassword = $("#pwordConfirm").val();
+        var email = $("#email").val();
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-<%--        // Check if passwords match--%>
-<%--        if (password !== confirmPassword) {--%>
-<%--            $("#password-mismatch-error").text("Passwords do not match");--%>
-<%--            return false; // Prevent form submission--%>
-<%--        } else {--%>
-<%--            $("#password-mismatch-error").text("");--%>
-<%--        }--%>
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            $("#password-mismatch-error").text("Passwords do not match");
+            return false; // Prevent form submission
+        } else {
+            $("#password-mismatch-error").text("");
+        }
 
-<%--        // Check if email is valid--%>
-<%--        if (!emailPattern.test(email)) {--%>
-<%--            $("#email-validation-error").text("Invalid email format");--%>
-<%--            return false; // Prevent form submission--%>
-<%--        } else {--%>
-<%--            $("#email-validation-error").text("");--%>
-<%--        }--%>
+        // Check if email is valid
+        if (!emailPattern.test(email)) {
+            $("#email-validation-error").text("Invalid email format");
+            return false; // Prevent form submission
+        } else {
+            $("#email-validation-error").text("");
+        }
 
-<%--        // If everything is valid--%>
-<%--        return true;--%>
-<%--    }--%>
-<%--</script>--%>
+        // If everything is valid
+        return true;
+    }
+</script>
 </body>
 </html>

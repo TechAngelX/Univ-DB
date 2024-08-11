@@ -10,6 +10,15 @@ public class DatabaseUtils {
     private static final String PASSWORD = System.getenv("DB_PASSWORD");
     private static Connection connection = null;
 
+    static {
+        try {
+            // Load the JDBC driver
+            Class.forName("oracle.jdbc.OracleDriver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Oracle JDBC driver not found", e);
+        }
+    }
+
     public static Connection getConnection() throws SQLException {
         // Check if environment variables are set
         if (URL == null || USER == null || PASSWORD == null) {
