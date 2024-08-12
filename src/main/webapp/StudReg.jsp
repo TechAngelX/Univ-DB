@@ -33,7 +33,7 @@
     <div class="form-box">
         <h1 class="text-center">Student Registration</h1>
         <p class="text-center">Please complete the form to create a student account</p>
-        <form action="${pageContext.request.contextPath}/StudReg" method="post" onsubmit="return validateForm()">
+        <form action="${pageContext.request.contextPath}/StudRegServlet" method="post" onsubmit="return validateForm()">
             <!-- First Name field -->
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -73,10 +73,9 @@
                 <label for="prog"><strong>Programme:</strong></label>
                 <select class="form-control" name="prog" id="prog" required>
                     <option value="">Select a programme</option>
-                    <!-- Populate this dynamically from the database -->
+                    <!-- You would dynamically populate this list from the database -->
                     <option value="1">MSc Mathematics</option>
-                    <option value="2">MSc Computer Science</option>
-                    <!-- Add other programmes here -->
+                    <option value="2">BSc Computer Science</option>
                 </select>
             </div>
 

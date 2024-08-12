@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration | Univ-DB</title>
+    <title>Staff Registration | Univ-DB</title>
     <!-- Include Bootstrap CSS for styling -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -31,9 +31,9 @@
 <body>
 <div class="container form-container">
     <div class="form-box">
-        <h1 class="text-center">Student Registration</h1>
-        <p class="text-center">Please complete the form to create a student account</p>
-        <form action="${pageContext.request.contextPath}/StudReg" method="post" onsubmit="return validateForm()">
+        <h1 class="text-center">Staff Registration</h1>
+        <p class="text-center">Please complete the form to create a staff account</p>
+        <form action="${pageContext.request.contextPath}/StaffRegServlet" method="post" onsubmit="return validateForm()">
             <!-- First Name field -->
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -68,15 +68,13 @@
                 <p id="email-validation-error" class="text-danger"></p>
             </div>
 
-            <!-- Programme field -->
+            <!-- Role field -->
             <div class="form-group">
-                <label for="prog"><strong>Programme:</strong></label>
-                <select class="form-control" name="prog" id="prog" required>
-                    <option value="">Select a programme</option>
-                    <!-- Populate this dynamically from the database -->
-                    <option value="1">MSc Mathematics</option>
-                    <option value="2">MSc Computer Science</option>
-                    <!-- Add other programmes here -->
+                <label for="role"><strong>Role:</strong></label>
+                <select class="form-control" name="role" id="role" required>
+                    <option value="">Select a role</option>
+                    <option value="ProfServ Staff">ProfServ Staff</option>
+                    <option value="Academic Staff">Academic Staff</option>
                 </select>
             </div>
 

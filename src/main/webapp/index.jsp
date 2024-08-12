@@ -29,7 +29,7 @@
 <body>
 <div class="container">
     <div class="welcome-box">
-        <h1 class="text-center">Welcome to Uni-DB Application, the university login marking academic portal</h1>
+        <h1 class="text-center">Welcome to Uni-DB Application, the University login marking academic portal</h1>
         <p class="text-center">Please choose an option:</p>
         <div class="text-center">
             <a class="btn btn-primary" href="login.jsp">Login</a>
