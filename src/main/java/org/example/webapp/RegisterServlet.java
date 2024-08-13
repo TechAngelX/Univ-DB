@@ -5,156 +5,91 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.sql.*;
+
 import org.mindrot.jbcrypt.BCrypt;
+import java.util.Random;
 
-@WebServlet("/register")
+@WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
-
-    private static final Random RANDOM = new Random();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String firstName = request.getParameter("fname");
         String lastName = request.getParameter("lname");
-        String password = request.getParameter("password");
-        String confirmPassword = request.getParameter("pwordConfirm");
         String email = request.getParameter("email");
-        String role = request.getParameter("role");
+        String password = request.getParameter("password");
+        String userType = request.getParameter("userType");
+        String programme = request.getParameter("prog_id");
+        String staffRole = request.getParameter("role");
 
-        if (isInvalidInput(firstName, lastName, password, confirmPassword, email, role)) {
-            response.getWriter().println("All fields are required.");
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            response.getWriter().println("Invalid email format.");
-            return;
-        }
-
-        if (!password.equals(confirmPassword)) {
-            response.getWriter().println("Passwords do not match.");
-            return;
-        }
+        // Hash the password
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
         // Generate a unique username
-        String username = generateUniqueUsername(firstName, lastName);
+        String username = generateUsername(firstName, lastName);
 
-        if (username == null) {
-            response.getWriter().println("Error: Unable to generate a unique username.");
-            return;
-        }
+        // Insert user information into USER_ACC table
+        String sqlUserAcc = "INSERT INTO USER_ACC (USERNAME_DB, EMAIL_DB, PWORD_DB, ROLE_ID_DB) VALUES (?, ?, ?, ?)";
+        int roleId = "student".equals(userType) ? 1 : 2; // Assuming 1 for students and 2 for staff
 
-        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
-        int roleId = mapRoleToId(role);
+        try (Connection conn = DatabaseUtils.getConnection();
+             PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc, PreparedStatement.RETURN_GENERATED_KEYS)) {
 
-        if (roleId == -1) {
-            response.getWriter().println("Invalid role selected.");
-            return;
-        }
+            stmtUserAcc.setString(1, username);
+            stmtUserAcc.setString(2, email);
+            stmtUserAcc.setString(3, hashedPassword);
+            stmtUserAcc.setInt(4, roleId);
+            stmtUserAcc.executeUpdate();
 
-        if (registerUser(firstName, lastName, username, email, hashedPassword, roleId)) {
-            request.getSession().setAttribute("username", username);
-            response.sendRedirect("home.jsp");
-        } else {
-            response.getWriter().println("Error: Unable to register user.");
-        }
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("register.jsp");
-    }
-
-    private boolean isInvalidInput(String firstName, String lastName, String password, String confirmPassword, String email, String role) {
-        return firstName == null || firstName.isEmpty() ||
-                lastName == null || lastName.isEmpty() ||
-                password == null || password.isEmpty() ||
-                confirmPassword == null || confirmPassword.isEmpty() ||
-                email == null || email.isEmpty() ||
-                role == null || role.isEmpty();
-    }
-
-    private boolean isValidEmail(String email) {
-        Pattern emailPattern = Pattern.compile("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$");
-        Matcher emailMatcher = emailPattern.matcher(email);
-        return emailMatcher.matches();
-    }
-
-    private String generateUniqueUsername(String firstName, String lastName) {
-        String baseUsername = firstName.substring(0, 1).toLowerCase() + lastName.substring(0, Math.min(4, lastName.length())).toLowerCase();
-        String username;
-        int attempts = 0;
-
-        do {
-            String randomDigits = String.format("%03d", RANDOM.nextInt(1000));
-            username = baseUsername + randomDigits;
-            attempts++;
-            if (attempts > 10) {
-                return null; // Avoid infinite loops
-            }
-        } while (!isUsernameUnique(username));
-
-        return username;
-    }
-
-    private boolean isUsernameUnique(String username) {
-        String sql = "SELECT COUNT(*) FROM USER_ACC WHERE UNAME_DB = ?";
-
-        try (Connection connection = DatabaseUtils.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
-
-            statement.setString(1, username);
-
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
-                    return resultSet.getInt(1) == 0; // No matching username found
+            // Get generated user ID
+            int userId = 0;
+            try (ResultSet generatedKeys = stmtUserAcc.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    userId = generatedKeys.getInt(1);
                 }
             }
-        } catch (SQLException e) {
-            e.printStackTrace(); // Log the exception
-        }
 
-        return false;
-    }
-
-    private boolean registerUser(String firstName, String lastName, String username, String email, String hashedPassword, int roleId) throws ServletException {
-        try (Connection connection = DatabaseUtils.getConnection()) {
-            String sql = "INSERT INTO USER_ACC (ROLE_ID_DB, FNAME_DB, LNAME_DB, UNAME_DB, PWORDHASH_DB, EMAIL_DB) VALUES (?, ?, ?, ?, ?, ?)";
-            PreparedStatement stmt = connection.prepareStatement(sql);
-
-            stmt.setInt(1, roleId);
-            stmt.setString(2, firstName);
-            stmt.setString(3, lastName);
-            stmt.setString(4, username); // Store the generated username
-            stmt.setString(5, hashedPassword);
-            stmt.setString(6, email);
-
-            int result = stmt.executeUpdate();
-            return result > 0;
+            // Insert student or staff-specific information
+            if ("student".equals(userType)) {
+                String sqlStudent = "INSERT INTO STUDENT (STUD_NUM, PROG_ID_DB, USER_ID_DB) VALUES (?, ?, ?)";
+                try (PreparedStatement stmtStudent = conn.prepareStatement(sqlStudent)) {
+                    stmtStudent.setInt(1, userId);
+                    stmtStudent.setString(2, programme);
+                    stmtStudent.setString(3, firstName);
+                    stmtStudent.setString(4, lastName);
+                    stmtStudent.executeUpdate();
+                }
+            } else if ("staff".equals(userType)) {
+                String sqlStaff = "INSERT INTO STAFF (STAFF_NUM, STAFF_TYPE_DB, USER_ID_DB) VALUES (?, ?, ?)";
+                try (PreparedStatement stmtStaff = conn.prepareStatement(sqlStaff)) {
+                    stmtStaff.setInt(1, userId);
+                    stmtStaff.setString(2, staffRole);
+                    stmtStaff.setString(3, firstName);
+                    stmtStaff.setString(4, lastName);
+                    stmtStaff.executeUpdate();
+                }
+            } else {
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid user type");
+                return;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-            throw new ServletException("Database access error: " + e.getMessage(), e);
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error occurred during registration");
+            return;
         }
+
+        // Redirect to a success page
+        response.sendRedirect("home.jsp");
     }
 
-    private int mapRoleToId(String roleName) {
-        switch (roleName) {
-            case "Student":
-                return 1;
-            case "ProvServ Staff": // Fixed role name to match expected format
-                return 2;
-            case "Academic Staff":
-                return 3;
-            default:
-                return -1;
-        }
+    private String generateUsername(String firstName, String lastName) {
+        String firstInitial = firstName.length() > 0 ? String.valueOf(firstName.charAt(0)) : "";
+        String lastFour = lastName.length() >= 4 ? lastName.substring(lastName.length() - 4) : lastName;
+        String randomNumbers = String.format("%03d", new Random().nextInt(1000));
+
+        return (firstInitial + lastFour + randomNumbers).toLowerCase();
     }
 }

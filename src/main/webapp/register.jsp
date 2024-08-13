@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration | Univ-DB</title>
-    <!-- Include Bootstrap CSS for styling -->
+    <title>Registration | Univ-DB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body, html {
@@ -31,95 +30,91 @@
 <body>
 <div class="container form-container">
     <div class="form-box">
-        <h1 class="text-center">Student Registration</h1>
-        <p class="text-center">Please complete the form to create a student account</p>
-        <form action="${pageContext.request.contextPath}/StudReg" method="post" onsubmit="return validateForm()">
-            <!-- First Name field -->
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="fname"><strong>First Name:</strong></label>
-                    <input class="form-control" type="text" name="fname" id="fname" required placeholder="Enter your first name">
+        <h1 class="text-center">Univ-DB</h1>
+        <form action="RegisterServlet" method="post">
+            <!-- Common fields -->
+            <div class="form-box">
+                <h3 class="text-center">Registration</h3>
+                <p class="text-center">Please complete the form to create an account</p>
+
+                <!-- First Name field -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="fname"><strong>First Name:</strong></label>
+                        <input class="form-control" type="text" name="fname" id="fname" required placeholder="Enter your first name">
+                    </div>
+                    <!-- Last Name field -->
+                    <div class="form-group col-md-6">
+                        <label for="lname"><strong>Last Name:</strong></label>
+                        <input class="form-control" type="text" name="lname" id="lname" required placeholder="Enter your last name">
+                    </div>
                 </div>
-                <!-- Last Name field -->
-                <div class="form-group col-md-6">
-                    <label for="lname"><strong>Last Name:</strong></label>
-                    <input class="form-control" type="text" name="lname" id="lname" required placeholder="Enter your last name">
+
+                <!-- Password field -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="password"><strong>Password:</strong></label>
+                        <input class="form-control" type="password" name="password" id="password" required placeholder="Enter your password">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="pwordConfirm"><strong>Confirm Password:</strong></label>
+                        <input class="form-control" type="password" name="pwordConfirm" id="pwordConfirm" required placeholder="Confirm your password">
+                    </div>
                 </div>
-            </div>
 
-            <!-- Password field -->
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="pword"><strong>Password:</strong></label>
-                    <input class="form-control" type="password" name="password" id="pword" required placeholder="Enter your password">
+                <p id="password-mismatch-error" class="text-danger"></p>
+
+                <!-- Email Address field -->
+                <div class="form-group">
+                    <label for="email"><strong>Email:</strong></label>
+                    <input class="form-control" type="email" name="email" id="email" required placeholder="Enter your email address">
+                    <p id="email-validation-error" class="text-danger"></p>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="pwordConfirm"><strong>Confirm Password:</strong></label>
-                    <input class="form-control" type="password" name="pwordConfirm" id="pwordConfirm" required placeholder="Confirm your password">
+
+                <!-- Role or Programme -->
+                <div class="form-group">
+                    <label for="userType">Register as:</label>
+                    <select class="form-control" id="userType" name="userType" required>
+                        <option value="">Select User Type</option>
+                        <option value="student">Student</option>
+                        <option value="staff">Staff</option>
+                    </select>
                 </div>
+
+                <!-- Student-specific fields -->
+                <div class="form-group" id="progDiv" style="display: none;">
+                    <label for="prog_id">Programme:</label>
+                    <select class="form-control" id="prog_id" name="prog_id">
+                        <option value="">Select a programme</option>
+                        <option value="MSc_Computer_Science">MSc Computer Science</option>
+                        <option value="BSc_Mathematics">BSc Mathematics</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <!-- Staff-specific fields -->
+                <div class="form-group" id="roleDiv" style="display: none;">
+                    <label for="role">Role:</label>
+                    <select class="form-control" id="role" name="role">
+                        <option value="">Select a role</option>
+                        <option value="Academic_Staff">Academic Staff</option>
+                        <option value="Professional_Services">Professional Services</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
             </div>
-
-            <p id="password-mismatch-error" class="text-danger"></p>
-
-            <!-- Email Address field -->
-            <div class="form-group">
-                <label for="email"><strong>Email:</strong></label>
-                <input class="form-control" type="email" name="email" id="email" required placeholder="Enter your email address">
-                <p id="email-validation-error" class="text-danger"></p>
-            </div>
-
-            <!-- Programme field -->
-            <div class="form-group">
-                <label for="prog"><strong>Programme:</strong></label>
-                <select class="form-control" name="prog" id="prog" required>
-                    <option value="">Select a programme</option>
-                    <!-- Populate this dynamically from the database -->
-                    <option value="1">MSc Mathematics</option>
-                    <option value="2">MSc Computer Science</option>
-                    <!-- Add other programmes here -->
-                </select>
-            </div>
-
-            <!-- Sign Up button -->
-            <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
         </form>
-
-        <!-- Already registered link -->
-        <p class="text-center mt-3"><a href="login.jsp">Already have an account? Login here</a></p>
     </div>
 </div>
 
-<!-- Include Bootstrap and jQuery JavaScript -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 <script>
-    function validateForm() {
-        var password = $("#pword").val();
-        var confirmPassword = $("#pwordConfirm").val();
-        var email = $("#email").val();
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Check if passwords match
-        if (password !== confirmPassword) {
-            $("#password-mismatch-error").text("Passwords do not match");
-            return false; // Prevent form submission
-        } else {
-            $("#password-mismatch-error").text("");
-        }
-
-        // Check if email is valid
-        if (!emailPattern.test(email)) {
-            $("#email-validation-error").text("Invalid email format");
-            return false; // Prevent form submission
-        } else {
-            $("#email-validation-error").text("");
-        }
-
-        // If everything is valid
-        return true;
-    }
+    document.getElementById('userType').addEventListener('change', function() {
+        var userType = this.value;
+        document.getElementById('progDiv').style.display = userType === 'student' ? 'block' : 'none';
+        document.getElementById('roleDiv').style.display = userType === 'staff' ? 'block' : 'none';
+    });
 </script>
 </body>
 </html>

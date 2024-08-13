@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 
     private boolean authenticateUser(String username, String password) throws SQLException {
         boolean isValidUser = false;
-        String sql = "SELECT PWORDHASH_DB FROM USER_ACC WHERE UNAME_DB = ?";
+        String sql = "SELECT PWORD_DB FROM USER_ACC WHERE USERNAME_DB = ?";
 
         try (Connection connection = DatabaseUtils.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
