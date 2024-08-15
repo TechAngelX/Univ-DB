@@ -32,6 +32,24 @@
             <h3 class="text-center">Registration</h3>
             <p class="text-center">Please complete the form to create an account</p>
 
+            <!-- First Name field -->
+            <div class="form-group">
+                <label for="fname"><strong>First Name:</strong></label>
+                <input class="form-control" type="text" name="fname" id="fname" required placeholder="Enter your Firstname">
+            </div>
+
+            <!-- Last Name field -->
+            <div class="form-group">
+                <label for="lname"><strong>Last Name:</strong></label>
+                <input class="form-control" type="text" name="lname" id="lname" required placeholder="Enter your Lastname">
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email"><strong>E-Mail Name:</strong></label>
+                <input class="form-control" type="text" name="email" id="email" required placeholder="Enter your email">
+            </div>
+
             <!-- Username field -->
             <div class="form-group">
                 <label for="username"><strong>Username:</strong></label>
@@ -49,4 +67,6 @@
     </div>
 </div>
 </body>
+
 </html>
+-

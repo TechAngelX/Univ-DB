@@ -17,8 +17,12 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String firstname = request.getParameter("fname");
+        String lastname = request.getParameter("lname");
+        String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
 
         // Check if the username or password is missing
         if (username == null || password == null) {
@@ -30,14 +34,18 @@ public class RegisterServlet extends HttpServlet {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
         // SQL statement to insert user into USER_ACC table
-        String sqlUserAcc = "INSERT INTO USER_ACC (USERNAME, PWORD) VALUES (?, ?)";
+        String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME ,PWORD) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseUtils.getConnection();
              PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc)) {
 
             // Set parameters
-            stmtUserAcc.setString(1, username);
-            stmtUserAcc.setString(2, hashedPassword);
+            stmtUserAcc.setString(1, firstname);
+            stmtUserAcc.setString(2, lastname);
+            stmtUserAcc.setString(3, email);
+            stmtUserAcc.setString(4, username);
+            stmtUserAcc.setString(5, hashedPassword);
+
 
             // Execute update
             stmtUserAcc.executeUpdate();
