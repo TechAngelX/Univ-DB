@@ -38,14 +38,14 @@
         <form action="${pageContext.request.contextPath}/login" method="post">
             <!-- Username field -->
             <div class="form-group">
-                <label for="uname"><strong>Username:</strong></label>
-                <input class="form-control" type="text" name="uname" id="uname" required placeholder="Enter your username">
+                <label for="username"><strong>Username:</strong></label>
+                <input class="form-control" type="text" name="username" id="username" required placeholder="Enter your username">
             </div>
 
             <!-- Password field -->
             <div class="form-group">
-                <label for="pword"><strong>Password:</strong></label>
-                <input class="form-control" type="password" name="pword" id="pword" required placeholder="Enter your password">
+                <label for="password"><strong>Password:</strong></label>
+                <input class="form-control" type="password" name="password" id="password" required placeholder="Enter your password">
             </div>
 
             <!-- Error and Success Messages -->

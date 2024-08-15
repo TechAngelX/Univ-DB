@@ -16,8 +16,8 @@ import org.mindrot.jbcrypt.BCrypt;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("uname");
-        String password = request.getParameter("pword");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
         if (username == null || password == null) {
             response.sendRedirect("login.jsp?error=Invalid%20credentials");
@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 
     private boolean authenticateUser(String username, String password) throws SQLException {
         boolean isValidUser = false;
-        String sql = "SELECT PWORD_DB FROM USER_ACC WHERE USERNAME_DB = ?";
+        String sql = "SELECT PWORD FROM USER_ACC WHERE USERNAME = ?";
 
         try (Connection connection = DatabaseUtils.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    String storedPasswordHash = resultSet.getString("PWORDHASH_DB");
+                    String storedPasswordHash = resultSet.getString("PWORD");
                     if (BCrypt.checkpw(password, storedPasswordHash)) {
                         isValidUser = true;
                     } else {
