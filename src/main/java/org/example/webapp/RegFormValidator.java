@@ -6,10 +6,11 @@ import java.util.Map;
 public class RegFormValidator {
 
     // Validates the entire form and returns a map of errors
-    public static Map<String, String> validateForm(String fname, String lname, String email, String pword, String pwordConfirm) {
+    public static Map<String, String> validateForm(String fname, String lname, String pword, String pwordConfirm) {
         Map<String, String> errors = new HashMap<>();
 
         // Validate first name
+
         if (!validateFirstName(fname)) {
             errors.put("fname", "First name cannot be empty or contain spaces. Press back button and start again.");
         }
@@ -19,12 +20,7 @@ public class RegFormValidator {
             errors.put("lname", "Last name cannot be empty or contain spaces. Press back button and start again.");
         }
 
-        // Validate email
-        if (!validateEmail(email)) {
-            errors.put("email", "Email cannot be empty or contain spaces. Press back button and start again.");
-        }
-
-         // Validate password
+             // Validate password
         if (!validatePassword(pword)) {
             errors.put("pword", "Password cannot be empty or contain spaces. Press back button and start again.");
         }
@@ -47,10 +43,6 @@ public class RegFormValidator {
         return lname != null && !lname.trim().isEmpty() && !containsSpaces(lname);
     }
 
-    // Validates the email
-    public static boolean validateEmail(String email) {
-        return email != null && !email.trim().isEmpty() && !containsSpaces(email);
-    }
 
 
     // Validates the password

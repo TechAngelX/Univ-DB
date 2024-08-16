@@ -64,13 +64,6 @@
                 </div>
             </div>
 
-            <!-- Email Address field -->
-            <div class="form-group">
-                <label for="email"><strong>Email:</strong></label>
-                <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email address">
-                <p id="email-error" class="text-danger"></p>
-            </div>
-
             <!-- Student or Staff Choice -->
             <div class="form-group">
                 <label for="accType">Register as:</label>
@@ -94,7 +87,6 @@
         form.addEventListener("submit", function(event) {
             const fname = document.getElementById("fname").value.trim();
             const lname = document.getElementById("lname").value.trim();
-            const email = document.getElementById("email").value.trim();
             const password = document.getElementById("pword").value.trim();
             const passwordConfirm = document.getElementById("pwordConfirm").value.trim();
 
@@ -103,7 +95,6 @@
             // Reset all error messages
             document.getElementById("fname-error").textContent = "";
             document.getElementById("lname-error").textContent = "";
-            document.getElementById("email-error").textContent = "";
             document.getElementById("pword-error").textContent = "";
             document.getElementById("pwordConfirm-error").textContent = "";
 
@@ -118,13 +109,6 @@
                 document.getElementById("lname-error").textContent = "Last name cannot be empty or contain spaces.";
                 isValid = false;
             }
-
-            // Email validation
-            if (email === "" || containsSpaces(email)) {
-                document.getElementById("email-error").textContent = "Email cannot be empty or contain spaces.";
-                isValid = false;
-            }
-
 
             // Password validation
             if (password === "" || containsSpaces(password)) {

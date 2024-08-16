@@ -26,14 +26,13 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
-        String email = request.getParameter("email");
         String pword = request.getParameter("pword");
         String pwordConfirm = request.getParameter("pwordConfirm");  // Retrieve password confirmation from request. Not entered into dbase.
         String accType = request.getParameter("accType");
 
         String username = generateUsername(fname,lname);
         // REGISTRATION FORM VALIDATION: -------------------------------------------------------------------------------
-        Map<String, String> errors = RegFormValidator.validateForm(fname, lname, email, pword, pwordConfirm);
+        Map<String, String> errors = RegFormValidator.validateForm(fname, lname, pword, pwordConfirm);
 
         // If there are validation errors, send a response with the first error found
         if (!errors.isEmpty()) {
@@ -46,6 +45,17 @@ public class RegisterServlet extends HttpServlet {
 
         // Hash the password
         String hashedPassword = BCrypt.hashpw(pword, BCrypt.gensalt());
+
+        // Determine the email domain based on the account type
+        String email;
+        if ("1".equals(accType)) { // Student
+            email = username + emailStudDomain;
+        } else if ("2".equals(accType)) { // Staff
+            email = username + emailStaffDomain;
+        } else {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid account type");
+            return;
+        }
 
         // SQL statement to insert user into
         // USER_ACC table
