@@ -18,6 +18,9 @@ import java.util.Random;
 public class RegisterServlet extends HttpServlet {
     private Random random = new Random();
 
+    private final String emailStudDomain = "@std.techangelx.ac.uk";
+    private final String emailStaffDomain = "@techangelx.ac.uk";
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -59,6 +62,8 @@ public class RegisterServlet extends HttpServlet {
             stmtUserAcc.setString(5, hashedPassword);
             stmtUserAcc.setInt(6, Integer.parseInt(accType)); // Handle conversion from string to integer
 
+            String studEmail = username + emailStudDomain;
+            String staffEmail = username + emailStaffDomain;
 
 
             // Execute update
@@ -73,6 +78,7 @@ public class RegisterServlet extends HttpServlet {
         }
 
     }
+
     private String generateUsername(String fname, String lname) {
         String firstInitial = !fname.isEmpty() ? String.valueOf(fname.charAt(0)) : "";
         String lastFour = lname.length() >= 4 ? lname.substring(0, 4) : lname;
@@ -83,4 +89,6 @@ public class RegisterServlet extends HttpServlet {
 
         return (firstInitial + lastFour + randomNumbers).toLowerCase();
     }
-}
+
+
+ }
