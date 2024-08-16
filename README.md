@@ -17,7 +17,8 @@ Clean and Simple: No bells and whistles, no fancy js. Just a basic structure for
 - Secure Login Management: Store and hash organize login credentials for various websites.
 - User Authentication: Secure user login using a backend database (MySQL) with robust password hashing.
 - Front-End Interface: Intuitive user experience built with HTML, CSS, and PHP, enhanced by Bootstrap for responsiveness.
-
+- Full Server Side and Client Side validation
+- 
 ## Technologies
 - Backend: MySQL (database management)
 - Front-End: HTML, CSS, PHP, Bootstrap
