@@ -12,22 +12,25 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Map;
+import java.util.Random;
 
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
+    private Random random = new Random();
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String email = request.getParameter("email");
-        String username = request.getParameter("username");
         String pword = request.getParameter("pword");
         String pwordConfirm = request.getParameter("pwordConfirm");  // Retrieve password confirmation from request. Not entered into dbase.
         String accType = request.getParameter("accType");
 
+        String username = generateUsername(fname,lname);
         // REGISTRATION FORM VALIDATION: -------------------------------------------------------------------------------
-        Map<String, String> errors = RegFormValidator.validateForm(fname, lname, email, username, pword, pwordConfirm);
+        Map<String, String> errors = RegFormValidator.validateForm(fname, lname, email, pword, pwordConfirm);
 
         // If there are validation errors, send a response with the first error found
         if (!errors.isEmpty()) {
@@ -68,6 +71,16 @@ public class RegisterServlet extends HttpServlet {
             e.printStackTrace();
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error occurred during registration");
         }
-    }
 
+    }
+    private String generateUsername(String fname, String lname) {
+        String firstInitial = !fname.isEmpty() ? String.valueOf(fname.charAt(0)) : "";
+        String lastFour = lname.length() >= 4 ? lname.substring(0, 4) : lname;
+        String randomNumbers;
+        do {
+            randomNumbers = String.format("%03d", random.nextInt(1000));
+        } while (randomNumbers.startsWith("1") || randomNumbers.startsWith("0"));
+
+        return (firstInitial + lastFour + randomNumbers).toLowerCase();
+    }
 }

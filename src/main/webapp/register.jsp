@@ -35,12 +35,6 @@
             <h3 class="text-center">Registration</h3>
             <p class="text-center">Please complete the form to create an account</p>
 
-            <!-- Username field -->
-            <div class="form-group">
-                <label for="username"><strong>Username:</strong></label>
-                <input class="form-control" type="text" name="username" id="username" placeholder="Enter your username">
-                <p id="username-error" class="text-danger"></p>
-            </div>
 
             <!-- First Name field -->
             <div class="form-row">
@@ -101,7 +95,6 @@
             const fname = document.getElementById("fname").value.trim();
             const lname = document.getElementById("lname").value.trim();
             const email = document.getElementById("email").value.trim();
-            const username = document.getElementById("username").value.trim();
             const password = document.getElementById("pword").value.trim();
             const passwordConfirm = document.getElementById("pwordConfirm").value.trim();
 
@@ -111,7 +104,6 @@
             document.getElementById("fname-error").textContent = "";
             document.getElementById("lname-error").textContent = "";
             document.getElementById("email-error").textContent = "";
-            document.getElementById("username-error").textContent = "";
             document.getElementById("pword-error").textContent = "";
             document.getElementById("pwordConfirm-error").textContent = "";
 
@@ -133,11 +125,6 @@
                 isValid = false;
             }
 
-            // Username validation
-            if (username === "" || containsSpaces(username)) {
-                document.getElementById("username-error").textContent = "Username cannot be empty or contain spaces.";
-                isValid = false;
-            }
 
             // Password validation
             if (password === "" || containsSpaces(password)) {
