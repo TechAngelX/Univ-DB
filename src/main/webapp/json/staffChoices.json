@@ -1,0 +1,17 @@
+{
+  "roles": [
+    {"value": "AS001", "text": "Academic Staff"},
+    {"value": "PS001", "text": "Professional Services"},
+    {"value": "SS001", "text": "Student Support Services"},
+    {"value": "AE001", "text": "Admissions and Enrolment"},
+    {"value": "LS001", "text": "Library Services"},
+    {"value": "MC001", "text": "Marketing and Communications"},
+    {"value": "FE001", "text": "Facilities and Estates"},
+    {"value": "IT001", "text": "IT Services"},
+    {"value": "HR001", "text": "Human Resources"},
+    {"value": "FD001", "text": "Finance Department"},
+    {"value": "GA001", "text": "General Administration"},
+    {"value": "SM001", "text": "Senior Management"},
+    {"value": "EX001", "text": "Executive Suite"}
+  ]
+}

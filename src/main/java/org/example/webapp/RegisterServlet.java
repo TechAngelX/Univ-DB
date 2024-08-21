@@ -20,28 +20,31 @@ public class RegisterServlet extends HttpServlet {
 
     private final String emailStudDomain = "@std.techangelx.ac.uk";
     private final String emailStaffDomain = "@techangelx.ac.uk";
-
+    private int minStudNum = 2001852; // Minimum for student number generator
+    private int maxStudNum = 25168942; // Minimum for student number generator
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String pword = request.getParameter("pword");
-        String pwordConfirm = request.getParameter("pwordConfirm");  // Retrieve password confirmation from request. Not entered into dbase.
+        String pwordConfirm = request.getParameter("pwordConfirm");
         String accType = request.getParameter("accType");
+        String studylevel = request.getParameter("studylevel");
+        String staffrole = request.getParameter("staffrole");
 
-        String username = generateUsername(fname,lname);
-        // REGISTRATION FORM VALIDATION: -------------------------------------------------------------------------------
+        String username = generateUsername(fname, lname);
+
+        // REGISTRATION FORM VALIDATION
+        //-------------------------------------------------------------------------------------------------------------------------
         Map<String, String> errors = RegFormValidator.validateForm(fname, lname, pword, pwordConfirm);
 
-        // If there are validation errors, send a response with the first error found
         if (!errors.isEmpty()) {
             for (String error : errors.values()) {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, error);
                 return;
             }
         }
-        // -----------------------------------------------------------------------------------------------------
 
         // Hash the password
         String hashedPassword = BCrypt.hashpw(pword, BCrypt.gensalt());
@@ -57,9 +60,10 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-        // SQL statement to insert user into
-        // USER_ACC table
-        String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME ,PWORD, ACCTYPEID) VALUES (?, ?, ?, ?, ?, ?)";
+        // SQL STATEMENT TO INSERT USER INTO USER_ACC TABLE
+        //-------------------------------------------------------------------------------------------------------------------------
+
+        String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME, PWORD, ACCTYPEID, STUDYLEVELID, STAFFROLEID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseUtils.getConnection();
              PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc)) {
@@ -72,8 +76,13 @@ public class RegisterServlet extends HttpServlet {
             stmtUserAcc.setString(5, hashedPassword);
             stmtUserAcc.setInt(6, Integer.parseInt(accType)); // Handle conversion from string to integer
 
-            String studEmail = username + emailStudDomain;
-            String staffEmail = username + emailStaffDomain;
+            if ("1".equals(accType)) { // Student
+                stmtUserAcc.setInt(7, Integer.parseInt(studylevel)); // Set study level
+                stmtUserAcc.setNull(8, java.sql.Types.VARCHAR); // Set STAFFROLEID to NULL
+            } else if ("2".equals(accType)) { // Staff
+                stmtUserAcc.setNull(7, java.sql.Types.INTEGER); // Set STUDYLEVELID to NULL
+                stmtUserAcc.setString(8, staffrole); // Set staff role as a string
+            }
 
 
             // Execute update
@@ -86,7 +95,6 @@ public class RegisterServlet extends HttpServlet {
             e.printStackTrace();
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error occurred during registration");
         }
-
     }
 
     private String generateUsername(String fname, String lname) {
@@ -100,5 +108,9 @@ public class RegisterServlet extends HttpServlet {
         return (firstInitial + lastFour + randomNumbers).toLowerCase();
     }
 
+    private static int generateStudentNumber(int minStudNum, int maxStudNum) {
+        Random random = new Random();
+        return random.nextInt((maxStudNum - minStudNum) + 1) + minStudNum;
 
- }
+    }
+}

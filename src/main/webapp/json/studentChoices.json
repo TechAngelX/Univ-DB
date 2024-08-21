@@ -1,0 +1,101 @@
+{
+  "degreeTypes": [
+    {"value": "1", "text": "BA"},
+    {"value": "2", "text": "BSc"},
+    {"value": "3", "text": "BEng"},
+    {"value": "4", "text": "MEng"},
+    {"value": "5", "text": "MA"},
+    {"value": "6", "text": "MSc"},
+    {"value": "7", "text": "MBA"},
+    {"value": "8", "text": "LLM"},
+    {"value": "9", "text": "LLB"},
+    {"value": "10", "text": "MPhil"},
+    {"value": "11", "text": "PhD"}
+  ],
+  "departments": [
+    {"value": "PHAS", "text": "Physics and Astronomy"},
+    {"value": "BIOS", "text": "Biological Sciences"},
+    {"value": "BENV", "text": "Built Environment"},
+    {"value": "COMP", "text": "Computer Science"},
+    {"value": "ECO", "text": "Economics"},
+    {"value": "ENG", "text": "Engineering"},
+    {"value": "ART", "text": "Art & Design"},
+    {"value": "HUMN", "text": "Humanities & Social Science"},
+    {"value": "MATH", "text": "Mathematics and Statistics"},
+    {"value": "MCC", "text": "Media and Communication"},
+    {"value": "PERF", "text": "Performing Arts"},
+    {"value": "PHIL", "text": "Philosophy"},
+    {"value": "BEH", "text": "Behavioral Sciences"},
+    {"value": "LAW", "text": "Law"},
+    {"value": "BUS", "text": "Business"},
+    {"value": "MED", "text": "Medicine"}
+  ],
+  "programmes": {
+    "PHAS": [
+      "Astronomy", "Astrophysics", "Cosmology", "Planetary Science", "Space Science",
+      "Electromagnetism", "Solid State Physics", "Nuclear Physics", "Applied Physics",
+      "Physics", "Quantum Mechanics", "Thermodynamics", "Particle Physics"
+    ],
+    "BIOS": [
+      "Marine Biology", "Biotechnology", "Genetics", "Ecology", "Microbiology"
+    ],
+    "BENV": [
+      "Civil Engineering", "Quantity Surveying", "Construction Management",
+      "Urban Planning", "Building Services Engineering", "Sustainable Design",
+      "Waste Management", "Environmental Science", "Architecture"
+    ],
+    "COMP": [
+      "Computer Science", "Data Science", "Disruptive Technologies", "Advanced Computing Technologies",
+      "Artificial Intelligence", "Cybersecurity", "Software Engineering", "Human-Computer Interaction",
+      "Machine Learning"
+    ],
+    "ECO": [
+      "Economics", "MacroEconomics", "International Economics", "Development Economics",
+      "Behavioral Economics", "Economic Policy"
+    ],
+    "ENG": [
+      "Mechanical Engineering", "Robotics", "Electrical Engineering", "Aerospace Engineering",
+      "Chemical Engineering"
+    ],
+    "ART": [
+      "Fine Arts", "Fashion Design", "Costume Design", "Creative Makeup Artistry and Design",
+      "Theatrical, Professional Make-up and Special Effects", "Art History",
+      "Visual Effects for Film & TV", "Entrepreneurship & Art", "Curating", "Sculpture"
+    ],
+    "HUMN": [
+      "Humanities with Italian", "Modern History", "Ancient History", "French",
+      "Italian", "Russian", "Spanish", "Japanese", "Farsi", "Arabic", "German",
+      "Sociology", "International Relations", "Global Affairs & Public Policy"
+    ],
+    "MATH": [
+      "Pure Mathematics", "Computational Mathematics", "Mathematical Finance", "Mathematics",
+      "Statistics", "Applied Mathematics"
+    ],
+    "MCC": [
+      "Marketing", "International Marketing", "Film Studies", "Media", "Media Production",
+      "Film & Media Production", "Print & Web Media Publishing", "Public Relations",
+      "Radio Production", "Journalism"
+    ],
+    "PERF": [
+      "Acting", "Presenting for Radio & TV", "Music", "Music Technology", "Music Performance",
+      "Set Design", "Stage Directing"
+    ],
+    "PHIL": [
+      "Philosophy", "Ethics", "Political Philosophy", "Ancient Greek Philosophy", "Epistemology"
+    ],
+    "BEH": [
+      "Neuroscience", "Psychology", "Cognitive Psychology", "Clinical Psychology",
+      "Developmental Psychology", "Social Psychology"
+    ],
+    "LAW": [
+      "Law", "Media Law", "Intellectual Property", "Criminal Law", "International Law",
+      "Corporate Law"
+    ],
+    "BUS": [
+      "Business Administration", "Finance", "Accounting", "Management"
+    ],
+    "MED": [
+      "Medicine", "Dentistry", "Nursing", "Pharmacy", "Public Health"
+    ]
+  }
+}
