@@ -76,24 +76,16 @@
                 <p id="accType-error" class="text-danger"></p>
             </div>
 
-            <!-- Degree Type for Students -->
-            <div class="form-group" id="degreeType-group" style="display: none;">
-                <label for="degreeType">Degree Type:</label>
-                <select class="form-control" id="degreeType" name="degreeType">
-                    <option value="">Select Degree Type</option>
+            <!-- Award Dropdown for Students -->
+            <div class="form-group" id="award-group" style="display: none;">
+                <label for="award">Award:</label>
+                <select class="form-control" id="award" name="award">
+                    <option value="">Select Award</option>
                 </select>
-                <p id="degreeType-error" class="text-danger"></p>
+                <p id="award-error" class="text-danger"></p>
             </div>
 
-            <!-- Department and Programme for Students -->
-            <div class="form-group" id="department-group" style="display: none;">
-                <label for="department">Department:</label>
-                <select class="form-control" id="department" name="department">
-                    <option value="">Select Department</option>
-                </select>
-                <p id="department-error" class="text-danger"></p>
-            </div>
-
+            <!-- Programme Dropdown for Students -->
             <div class="form-group" id="programme-group" style="display: none;">
                 <label for="programme">Programme:</label>
                 <select class="form-control" id="programme" name="programme">
@@ -123,68 +115,63 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const accTypeSelect = document.getElementById("accType");
-        const degreeTypeGroup = document.getElementById("degreeType-group");
-        const departmentGroup = document.getElementById("department-group");
+        const awardGroup = document.getElementById("award-group");
         const programmeGroup = document.getElementById("programme-group");
         const staffRoleGroup = document.getElementById("staffrole-group");
+        const awardSelect = document.getElementById("award");
+        const programmeSelect = document.getElementById("programme");
 
         // Handle account type changes
         accTypeSelect.addEventListener("change", function() {
             if (accTypeSelect.value === "1") { // Student selected
-                degreeTypeGroup.style.display = "block";
-                departmentGroup.style.display = "block";
+                awardGroup.style.display = "block";
                 programmeGroup.style.display = "block";
                 staffRoleGroup.style.display = "none";
             } else if (accTypeSelect.value === "2") { // Staff selected
-                degreeTypeGroup.style.display = "none";
-                departmentGroup.style.display = "none";
+                awardGroup.style.display = "none";
                 programmeGroup.style.display = "none";
                 staffRoleGroup.style.display = "block";
             } else {
-                degreeTypeGroup.style.display = "none";
-                departmentGroup.style.display = "none";
+                awardGroup.style.display = "none";
                 programmeGroup.style.display = "none";
                 staffRoleGroup.style.display = "none";
             }
         });
 
-        // Fetch student choices from the servlet
-        fetch("json/studentChoices.json")
+        // Fetch awards and programmes from the servlet
+        fetch("StudentChoicesServlet")
             .then(response => response.json())
             .then(data => {
-                // Populate degree types
-                const degreeTypeSelect = document.getElementById("degreeType");
-                degreeTypeSelect.innerHTML = '<option value="">Select Degree Type</option>'; // Clear existing options
-                data.degreeTypes.forEach(degree => {
-                    const option = document.createElement('option');
-                    option.value = degree.value;
-                    option.textContent = degree.text;
-                    degreeTypeSelect.appendChild(option);
+                const awards = {};
+
+                // Group the data by award name
+                data.forEach(choice => {
+                    if (!awards[choice.AWARDNAME]) {
+                        awards[choice.AWARDNAME] = [];
+                    }
+                    awards[choice.AWARDNAME].push(choice);
                 });
 
-                // Populate departments
-                const departmentSelect = document.getElementById("department");
-                departmentSelect.innerHTML = '<option value="">Select Department</option>'; // Clear existing options
-                data.departments.forEach(department => {
+                // Populate awards dropdown
+                awardSelect.innerHTML = '<option value="">Select Award</option>';
+                Object.keys(awards).forEach(award => {
                     const option = document.createElement('option');
-                    option.value = department.value;
-                    option.textContent = department.text;
-                    departmentSelect.appendChild(option);
+                    option.value = award;
+                    option.textContent = award;
+                    awardSelect.appendChild(option);
                 });
 
-                // Update programmes dynamically when a department is selected
-                departmentSelect.addEventListener("change", function() {
-                    const selectedDept = this.value;
-                    const programmeSelect = document.getElementById("programme");
-                    programmeSelect.innerHTML = '<option value="">Select Programme</option>'; // Clear existing options
+                // Update programmes dynamically when an award is selected
+                awardSelect.addEventListener("change", function() {
+                    const selectedAward = this.value;
+                    programmeSelect.innerHTML = '<option value="">Select Programme</option>';
 
-                    if (data.programmes[selectedDept]) {
-                        data.programmes[selectedDept].forEach(programme => {
+                    if (awards[selectedAward]) {
+                        awards[selectedAward].forEach(programme => {
                             const option = document.createElement('option');
-                            option.value = programme;
-                            option.textContent = programme;
+                            option.value = programme.PROGID;
+                            option.textContent = programme.PROGNAME;
                             programmeSelect.appendChild(option);
-
                         });
                     }
                 });
@@ -192,6 +179,5 @@
             .catch(error => console.error('Error fetching student choices:', error));
     });
 </script>
-
 </body>
 </html>

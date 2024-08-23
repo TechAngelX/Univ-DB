@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 
 import org.json.JSONArray;
@@ -19,36 +20,24 @@ public class StudentChoicesServlet extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 
-        // Create JSON objects for degree types, departments, and programmes
-        JSONObject json = new JSONObject();
+        // Load JSON file from the classpath
+        InputStream inputStream = getServletContext().getResourceAsStream("/json/studentChoices.json");
+        if (inputStream == null) {
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "JSON file not found");
+            return;
+        }
 
-        // Populate degree types
-        JSONArray degreeTypes = new JSONArray();
-        degreeTypes.put(new JSONObject().put("value", "BSc").put("text", "Bachelor of Science"));
-        degreeTypes.put(new JSONObject().put("value", "BA").put("text", "Bachelor of Arts"));
-        degreeTypes.put(new JSONObject().put("value", "MSc").put("text", "Master of Science"));
-        degreeTypes.put(new JSONObject().put("value", "PhD").put("text", "Doctor of Philosophy"));
-
-        // Populate departments
-        JSONArray departments = new JSONArray();
-        departments.put(new JSONObject().put("value", "CS").put("text", "Computer Science"));
-        departments.put(new JSONObject().put("value", "ECE").put("text", "Electrical and Computer Engineering"));
-        departments.put(new JSONObject().put("value", "BIO").put("text", "Biology"));
-
-        // Populate programmes
-        JSONObject programmes = new JSONObject();
-        programmes.put("CS", new JSONArray().put("BSc Computer Science").put("MSc Computer Science"));
-        programmes.put("ECE", new JSONArray().put("BSc Electrical Engineering").put("MSc Electrical Engineering"));
-        programmes.put("BIO", new JSONArray().put("BSc Biology").put("PhD Biology"));
-
-        // Add the arrays to the main JSON object
-        json.put("degreeTypes", degreeTypes);
-        json.put("departments", departments);
-        json.put("programmes", programmes);
+        // Read the input stream
+        StringBuilder jsonContent = new StringBuilder();
+        try (java.util.Scanner scanner = new java.util.Scanner(inputStream, "UTF-8")) {
+            while (scanner.hasNextLine()) {
+                jsonContent.append(scanner.nextLine());
+            }
+        }
 
         // Write JSON response
         PrintWriter out = response.getWriter();
-        out.print(json.toString());
+        out.print(jsonContent.toString());
         out.flush();
     }
 }
