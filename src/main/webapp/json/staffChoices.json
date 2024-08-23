@@ -1,17 +1,54 @@
-{
-  "roles": [
-    {"value": "AS001", "text": "Academic Staff"},
-    {"value": "PS001", "text": "Professional Services"},
-    {"value": "SS001", "text": "Student Support Services"},
-    {"value": "AE001", "text": "Admissions and Enrolment"},
-    {"value": "LS001", "text": "Library Services"},
-    {"value": "MC001", "text": "Marketing and Communications"},
-    {"value": "FE001", "text": "Facilities and Estates"},
-    {"value": "IT001", "text": "IT Services"},
-    {"value": "HR001", "text": "Human Resources"},
-    {"value": "FD001", "text": "Finance Department"},
-    {"value": "GA001", "text": "General Administration"},
-    {"value": "SM001", "text": "Senior Management"},
-    {"value": "EX001", "text": "Executive Suite"}
-  ]
-}
+[
+  {
+    "STAFFROLEID": "AS001",
+    "STAFFROLENAME": "Academic Staff"
+  },
+  {
+    "STAFFROLEID": "PS001",
+    "STAFFROLENAME": "Professional Services"
+  },
+  {
+    "STAFFROLEID": "SS001",
+    "STAFFROLENAME": "Student Support Services"
+  },
+  {
+    "STAFFROLEID": "AE001",
+    "STAFFROLENAME": "Admissions and Enrolment"
+  },
+  {
+    "STAFFROLEID": "LS001",
+    "STAFFROLENAME": "Library Services"
+  },
+  {
+    "STAFFROLEID": "MC001",
+    "STAFFROLENAME": "Marketing and Communications"
+  },
+  {
+    "STAFFROLEID": "FE001",
+    "STAFFROLENAME": "Facilities and Estates"
+  },
+  {
+    "STAFFROLEID": "IT001",
+    "STAFFROLENAME": "IT Services"
+  },
+  {
+    "STAFFROLEID": "HR001",
+    "STAFFROLENAME": "Human Resources"
+  },
+  {
+    "STAFFROLEID": "FD001",
+    "STAFFROLENAME": "Finance Department"
+  },
+  {
+    "STAFFROLEID": "GA001",
+    "STAFFROLENAME": "General Administration"
+  },
+  {
+    "STAFFROLEID": "SM001",
+    "STAFFROLENAME": "Senior Management"
+  },
+  {
+    "STAFFROLEID": "EX001",
+    "STAFFROLENAME": "Executive Suite"
+  }
+]

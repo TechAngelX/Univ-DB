@@ -8,25 +8,37 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
-@WebServlet("/json/staffChoices")
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+@WebServlet("/StaffChoicesServlet")
 public class StaffChoicesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
 
-        // Get the file as a stream
+        // Load JSON file from the classpath
         InputStream inputStream = getServletContext().getResourceAsStream("/json/staffChoices.json");
-
-        if (inputStream != null) {
-            // Copy the input stream to the response output stream
-            byte[] buffer = new byte[1024];
-            int bytesRead;
-            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                response.getOutputStream().write(buffer, 0, bytesRead);
-            }
-        } else {
-            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Resource not found");
+        if (inputStream == null) {
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "JSON file not found");
+            return;
         }
+
+        // Read the input stream
+        StringBuilder jsonContent = new StringBuilder();
+        try (java.util.Scanner scanner = new java.util.Scanner(inputStream, StandardCharsets.UTF_8)) {
+            while (scanner.hasNextLine()) {
+                jsonContent.append(scanner.nextLine());
+            }
+        }
+
+        // Write JSON response
+        PrintWriter out = response.getWriter();
+        out.print(jsonContent.toString());
+        out.flush();
     }
 }

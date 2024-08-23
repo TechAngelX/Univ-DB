@@ -37,7 +37,6 @@
             <h3 class="text-center">Registration</h3>
             <p class="text-center">Please complete the form to create an account</p>
 
-            <!-- First Name and Last Name fields -->
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="fname"><strong>First Name:</strong></label>
@@ -51,7 +50,6 @@
                 </div>
             </div>
 
-            <!-- Password and Confirm Password fields -->
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="pword"><strong>Password:</strong></label>
@@ -65,7 +63,6 @@
                 </div>
             </div>
 
-            <!-- Student or Staff Choice -->
             <div class="form-group">
                 <label for="accType">Register as:</label>
                 <select class="form-control" id="accType" name="accType" required>
@@ -76,7 +73,6 @@
                 <p id="accType-error" class="text-danger"></p>
             </div>
 
-            <!-- Award Dropdown for Students -->
             <div class="form-group" id="award-group" style="display: none;">
                 <label for="award">Award:</label>
                 <select class="form-control" id="award" name="award">
@@ -85,7 +81,6 @@
                 <p id="award-error" class="text-danger"></p>
             </div>
 
-            <!-- Programme Dropdown for Students -->
             <div class="form-group" id="programme-group" style="display: none;">
                 <label for="programme">Programme:</label>
                 <select class="form-control" id="programme" name="programme">
@@ -94,14 +89,10 @@
                 <p id="programme-error" class="text-danger"></p>
             </div>
 
-            <!-- Staff Role for Staff -->
             <div class="form-group" id="staffrole-group" style="display: none;">
                 <label for="staffrole">Staff Role:</label>
                 <select class="form-control" id="staffrole" name="staffrole">
                     <option value="">Select Role</option>
-                    <option value="AS001">Academic Staff</option>
-                    <option value="PS001">Professional Services</option>
-                    <option value="SS001">Student Support Services</option>
                 </select>
                 <p id="staffrole-error" class="text-danger"></p>
             </div>
@@ -111,7 +102,6 @@
     </div>
 </div>
 
-<!-- JavaScript Logic -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const accTypeSelect = document.getElementById("accType");
@@ -120,6 +110,7 @@
         const staffRoleGroup = document.getElementById("staffrole-group");
         const awardSelect = document.getElementById("award");
         const programmeSelect = document.getElementById("programme");
+        const staffRoleSelect = document.getElementById("staffrole");
 
         // Handle account type changes
         accTypeSelect.addEventListener("change", function() {
@@ -177,7 +168,26 @@
                 });
             })
             .catch(error => console.error('Error fetching student choices:', error));
+
+        // Fetch Staff Roles from the servlet
+        fetch("StaffChoicesServlet")
+            .then(response => response.json())
+            .then(data => {
+                // Assuming data is directly an array of staff roles
+                const staffRoles = data || [];
+
+                // Populate staff roles dropdown
+                staffRoleSelect.innerHTML = '<option value="">Select Role</option>';
+                staffRoles.forEach(role => {
+                    const option = document.createElement('option');
+                    option.value = role.STAFFROLEID;
+                    option.textContent = role.STAFFROLENAME;
+                    staffRoleSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching staff roles:', error));
     });
 </script>
+
 </body>
 </html>

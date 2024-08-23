@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -29,7 +30,7 @@ public class StudentChoicesServlet extends HttpServlet {
 
         // Read the input stream
         StringBuilder jsonContent = new StringBuilder();
-        try (java.util.Scanner scanner = new java.util.Scanner(inputStream, "UTF-8")) {
+        try (java.util.Scanner scanner = new java.util.Scanner(inputStream, StandardCharsets.UTF_8)) {
             while (scanner.hasNextLine()) {
                 jsonContent.append(scanner.nextLine());
             }
