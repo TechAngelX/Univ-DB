@@ -5,197 +5,241 @@
     "PROGNAME": "Accounting",
     "PROGCODE": "BUS-ACCT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "BUS",
-    "DeptName": "Business"
+    "DEPTNAME": "Business",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "13600",
+    "PROGID": "15700",
     "PROGNAME": "Acting",
     "PROGCODE": "PERF-ACTG-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "DEPTNAME": "Performing Arts",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "8100",
+    "PROGID": "8600",
     "PROGNAME": "Advanced Aeronautical Engineering",
     "PROGCODE": "ENG-AAE-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "14500",
+    "PROGID": "16600",
     "PROGNAME": "Advanced Astrophysics",
     "PROGCODE": "PHAS-ASPH-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "16400",
+    "PROGID": "18500",
     "PROGNAME": "Advanced Coaching Techniques",
     "PROGCODE": "SPES-ACT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5200",
+    "PROGID": "5600",
     "PROGNAME": "Advanced Computing Technologies",
     "PROGCODE": "COMP-AVT-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
     "PROGID": "3800",
     "PROGNAME": "Advanced Genetics",
-    "PROGCODE": "BIOS-AVGENE-PHD",
+    "PROGCODE": "BIOS-AGEN-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "13300",
+    "PROGID": "15400",
     "PROGNAME": "Advanced Mathematics",
     "PROGCODE": "MTST-MTHM-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5100",
+    "PROGID": "5500",
     "PROGNAME": "Advanced Network Engineering",
     "PROGCODE": "COMP-ANE-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "7000",
+    "PROGID": "7500",
     "PROGNAME": "Advanced Robotics",
     "PROGCODE": "COMP-ROBO-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "PhD",
+    "PROGID": "19500",
+    "PROGNAME": "Advanced Sports Science",
+    "PROGCODE": "SPES-SPORT-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "13",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "15600",
+    "PROGID": "17700",
     "PROGNAME": "Advanced Thermodynamics",
     "PROGCODE": "PHAS-THDY-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "8200",
+    "PROGID": "8700",
     "PROGNAME": "Aerospace Engineering",
     "PROGCODE": "ENG-ASEN-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "13700",
+    "PROGNAME": "Anatomy",
+    "PROGCODE": "MED-ANAT-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "15800",
+    "PROGID": "17900",
     "PROGNAME": "Ancient Greek Philosophy",
     "PROGCODE": "PHIL-AGPH-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PHIL",
-    "DeptName": "Philosophy"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "8900",
-    "PROGNAME": "Ancient History",
-    "PROGCODE": "HUMN-ANHI-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Philosophy",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "8800",
+    "PROGID": "9700",
     "PROGNAME": "Ancient History",
     "PROGCODE": "HUMN-ANHI-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "13000",
-    "PROGNAME": "Applied Mathematics",
-    "PROGCODE": "MTST-AMTH-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "14400",
-    "PROGNAME": "Applied Physics",
-    "PROGCODE": "PHAS-APPH-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "9000",
+    "PROGID": "9800",
+    "PROGNAME": "Ancient History",
+    "PROGCODE": "HUMN-ANHI-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "13600",
+    "PROGNAME": "Anesthesiology",
+    "PROGCODE": "MED-ANAE-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "15100",
+    "PROGNAME": "Applied Mathematics",
+    "PROGCODE": "MTST-AMTH-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "MATH",
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "16500",
+    "PROGNAME": "Applied Physics",
+    "PROGCODE": "PHAS-APPH-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "PHAS",
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "9900",
     "PROGNAME": "Arabic",
     "PROGCODE": "HUMN-ARBC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "DPhil",
+    "PROGID": "10000",
+    "PROGNAME": "Archaeology",
+    "PROGCODE": "HUMN-ARCH-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "12",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
@@ -203,10 +247,10 @@
     "PROGNAME": "Architecture",
     "PROGCODE": "BENV-ARCH-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
@@ -214,54 +258,54 @@
     "PROGNAME": "Art History",
     "PROGCODE": "ART-AHIS-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5000",
+    "PROGID": "5400",
     "PROGNAME": "Artificial Intelligence",
     "PROGCODE": "COMP-AI-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "14300",
+    "PROGID": "16400",
     "PROGNAME": "Astronomy",
     "PROGCODE": "PHAS-ANMY-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "14600",
+    "PROGID": "16700",
     "PROGNAME": "Astrophysics",
     "PROGCODE": "PHAS-ASPH-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "7400",
+    "PROGID": "7900",
     "PROGNAME": "Behavioral Economics",
     "PROGCODE": "ECO-BECO-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "ECO",
-    "DeptName": "Economics"
+    "DEPTNAME": "Economics",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -269,10 +313,10 @@
     "PROGNAME": "Biotechnology",
     "PROGCODE": "BIOS-BIOT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BEng",
@@ -280,10 +324,10 @@
     "PROGNAME": "Building Services Engineering",
     "PROGCODE": "BENV-BSBE-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "3",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
@@ -291,43 +335,43 @@
     "PROGNAME": "Business Administration",
     "PROGCODE": "BUS-BADM-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "BUS",
-    "DeptName": "Business"
+    "DEPTNAME": "Business",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "5300",
+    "PROGID": "5700",
     "PROGNAME": "Business Computing",
     "PROGCODE": "COMP-BC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MBA",
-    "PROGID": "4800",
+    "PROGID": "5100",
     "PROGNAME": "Business Management",
     "PROGCODE": "BUS-MGMT-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "9",
     "DEPTID": "BUS",
-    "DeptName": "Business"
+    "DEPTNAME": "Business",
+    "": ""
   },
   {
     "AWARDNAME": "MEng",
-    "PROGID": "8300",
+    "PROGID": "8800",
     "PROGNAME": "Chemical Engineering",
     "PROGCODE": "ENG-CHEN-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "4",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -335,21 +379,10 @@
     "PROGNAME": "Civil Engineering",
     "PROGCODE": "BENV-CVLE-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "2300",
-    "PROGNAME": "Clinical Psychology",
-    "PROGCODE": "BEH-CLPY-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
@@ -357,21 +390,32 @@
     "PROGNAME": "Clinical Psychology",
     "PROGCODE": "BEH-CLPY-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "16500",
+    "PROGID": "2300",
+    "PROGNAME": "Clinical Psychology",
+    "PROGCODE": "BEH-CLPY-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "BEH",
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "18600",
     "PROGNAME": "Coaching Science",
     "PROGCODE": "SPES-COACH-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "DPhil",
@@ -379,65 +423,65 @@
     "PROGNAME": "Cognitive Psychology",
     "PROGCODE": "BEH-CGBE-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
     "DEGREETYPEID": "12",
     "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "13100",
+    "PROGID": "15200",
     "PROGNAME": "Computational Mathematics",
     "PROGCODE": "MTST-CMTH-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "5500",
-    "PROGNAME": "Computer Science",
-    "PROGCODE": "COMP-CS-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5400",
+    "PROGID": "5800",
     "PROGNAME": "Computer Science",
     "PROGCODE": "COMP-CS-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "5600",
+    "PROGID": "5900",
+    "PROGNAME": "Computer Science",
+    "PROGCODE": "COMP-CS-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "COMP",
+    "DEPTNAME": "Computer Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "6000",
     "PROGNAME": "Computer Systems Engineering",
     "PROGCODE": "COMP-CSE-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5700",
+    "PROGID": "6100",
     "PROGNAME": "Computer Vision",
     "PROGCODE": "COMP-CVIS-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -445,32 +489,43 @@
     "PROGNAME": "Construction Management",
     "PROGCODE": "BENV-CMAG-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBA",
+    "PROGID": "4700",
+    "PROGNAME": "Corporate Behaviour",
+    "PROGCODE": "BUS-CORP-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "9",
+    "DEPTID": "BUS",
+    "DEPTNAME": "Business",
+    "": ""
   },
   {
     "AWARDNAME": "LLM",
-    "PROGID": "10700",
+    "PROGID": "11900",
     "PROGNAME": "Corporate Law",
     "PROGCODE": "LAW-CPLW-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "6",
     "DEPTID": "LAW",
-    "DeptName": "Law"
+    "DEPTNAME": "Law",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "14700",
+    "PROGID": "16800",
     "PROGNAME": "Cosmology",
     "PROGCODE": "PHAS-CSMG-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
@@ -478,32 +533,32 @@
     "PROGNAME": "Costume Design",
     "PROGCODE": "ART-COSD-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
     "PROGID": "1100",
-    "PROGNAME": "Creative Makeup Artistry and Design",
+    "PROGNAME": "Creative Makeup Artistry & Design",
     "PROGCODE": "ART-CMAD-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "LLB",
-    "PROGID": "10600",
+    "PROGID": "11800",
     "PROGNAME": "Criminal Law",
     "PROGCODE": "LAW-CLLW-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "5",
     "DEPTID": "LAW",
-    "DeptName": "Law"
+    "DEPTNAME": "Law",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
@@ -511,65 +566,65 @@
     "PROGNAME": "Curating",
     "PROGCODE": "ART-CURA-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5800",
+    "PROGID": "6200",
     "PROGNAME": "Cybersecurity",
     "PROGCODE": "COMP-CYSC-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "5900",
+    "PROGID": "6300",
     "PROGNAME": "Data Analytics",
     "PROGCODE": "COMP-DA-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "6000",
+    "PROGID": "6400",
     "PROGNAME": "Data Science",
     "PROGCODE": "COMP-DS-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MBBS",
-    "PROGID": "12400",
+    "PROGID": "13800",
     "PROGNAME": "Dentistry",
     "PROGCODE": "MED-DENT-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
     "DEGREETYPEID": "11",
     "DEPTID": "MED",
-    "DeptName": "Medicine"
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "7500",
+    "PROGID": "8000",
     "PROGNAME": "Development Economics",
     "PROGCODE": "ECO-DECO-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "ECO",
-    "DeptName": "Economics"
+    "DEPTNAME": "Economics",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
@@ -577,21 +632,21 @@
     "PROGNAME": "Developmental Psychology",
     "PROGCODE": "BEH-DVPY-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "6100",
+    "PROGID": "6500",
     "PROGNAME": "Disruptive Technologies",
     "PROGCODE": "COMP-DT-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -599,65 +654,87 @@
     "PROGNAME": "Ecology",
     "PROGCODE": "BIOS-ECOL-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "7700",
+    "PROGID": "8200",
     "PROGNAME": "Econometrics in Global Finance",
     "PROGCODE": "ECO-EGF-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "ECO",
-    "DeptName": "Economics"
+    "DEPTNAME": "Economics",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "7800",
+    "PROGID": "8300",
     "PROGNAME": "Economic Policy",
     "PROGCODE": "ECO-EPOL-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "ECO",
-    "DeptName": "Economics"
+    "DEPTNAME": "Economics",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "7600",
+    "PROGID": "8100",
     "PROGNAME": "Economics",
     "PROGCODE": "ECO-ECO-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "ECO",
-    "DeptName": "Economics"
+    "DEPTNAME": "Economics",
+    "": ""
   },
   {
     "AWARDNAME": "MEng",
-    "PROGID": "8400",
+    "PROGID": "9000",
     "PROGNAME": "Electrical Engineering",
     "PROGCODE": "ENG-ELEN-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "4",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "14800",
+    "PROGID": "16900",
     "PROGNAME": "Electromagnetism",
     "PROGCODE": "PHAS-ELMG-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MEng",
+    "PROGID": "8900",
+    "PROGNAME": "Electronic and Electrical Engineering",
+    "PROGCODE": "ENG-EEE-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "4",
+    "DEPTID": "ENG",
+    "DEPTNAME": "Engineering",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BEng",
+    "PROGID": "9100",
+    "PROGNAME": "Energy Systems Engineering",
+    "PROGCODE": "ENG-ENER-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "3",
+    "DEPTID": "ENG",
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
@@ -665,10 +742,10 @@
     "PROGNAME": "Entrepreneurship & Art",
     "PROGCODE": "ART-ENTA-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -676,65 +753,65 @@
     "PROGNAME": "Environmental Science",
     "PROGCODE": "BENV-EVSC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "MPhil",
-    "PROGID": "15900",
+    "PROGID": "18000",
     "PROGNAME": "Epistemology",
     "PROGCODE": "PHIL-EPIS-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "10",
     "DEPTID": "PHIL",
-    "DeptName": "Philosophy"
+    "DEPTNAME": "Philosophy",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "16000",
+    "PROGID": "18100",
     "PROGNAME": "Ethics",
     "PROGCODE": "PHIL-ETHC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PHIL",
-    "DeptName": "Philosophy"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "16800",
-    "PROGNAME": "Exercise Physiology",
-    "PROGCODE": "SPES-EXPH-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Philosophy",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "16600",
+    "PROGID": "18700",
     "PROGNAME": "Exercise Physiology",
     "PROGCODE": "SPES-EXPH-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "16700",
+    "PROGID": "18800",
     "PROGNAME": "Exercise Physiology",
     "PROGCODE": "SPES-EXPH-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "18900",
+    "PROGNAME": "Exercise Physiology",
+    "PROGCODE": "SPES-EXPH-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
@@ -742,43 +819,65 @@
     "PROGNAME": "Fashion Design",
     "PROGCODE": "ART-FADS-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "11500",
+    "PROGID": "12700",
     "PROGNAME": "Film & Media Production",
     "PROGCODE": "MCC-FMDP-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
+  },
+  {
+    "AWARDNAME": "DPhil",
+    "PROGID": "10100",
+    "PROGNAME": "Film Studies",
+    "PROGCODE": "HUMN-FILM-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "12",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "11400",
+    "PROGID": "12600",
     "PROGNAME": "Film Studies",
     "PROGCODE": "MCC-FILM-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "4700",
+    "PROGID": "4900",
     "PROGNAME": "Finance",
     "PROGCODE": "BUS-FINA-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "BUS",
-    "DeptName": "Business"
+    "DEPTNAME": "Business",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBA",
+    "PROGID": "4800",
+    "PROGNAME": "Financial Management",
+    "PROGCODE": "BUS-FINA-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "9",
+    "DEPTID": "BUS",
+    "DEPTNAME": "Business",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
@@ -786,43 +885,43 @@
     "PROGNAME": "Fine Arts",
     "PROGCODE": "ART-FIAR-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "8500",
+    "PROGID": "9200",
     "PROGNAME": "Fluid Dynamics & Structural Synthesis",
     "PROGCODE": "ENG-FDSS-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "9100",
+    "PROGID": "10200",
     "PROGNAME": "French",
     "PROGCODE": "HUMN-FREN-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "6200",
+    "PROGID": "6600",
     "PROGNAME": "Games Technology",
     "PROGCODE": "COMP-GT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -830,230 +929,263 @@
     "PROGNAME": "Genetics",
     "PROGCODE": "BIOS-GENE-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "9300",
+    "PROGID": "10400",
     "PROGNAME": "German",
     "PROGCODE": "HUMN-GRMN-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "9200",
+    "PROGID": "10300",
     "PROGNAME": "Global Affairs & Public Policy",
     "PROGCODE": "HUMN-GLOB-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "10800",
+    "PROGID": "12000",
     "PROGNAME": "Government Policy Law",
     "PROGCODE": "LAW-GVPL-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "LAW",
-    "DeptName": "Law"
+    "DEPTNAME": "Law",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "13900",
+    "PROGNAME": "Gynecology and Obstetrics",
+    "PROGCODE": "MED-GYNE-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "9400",
+    "PROGID": "10500",
     "PROGNAME": "Historical Research Methodologies",
     "PROGCODE": "HUMN-HIRS-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "MSc",
-    "PROGID": "6300",
-    "PROGNAME": "Human-Computer Interaction",
-    "PROGCODE": "COMP-HCI-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "8",
-    "DEPTID": "COMP",
-    "DeptName": "Computer Science"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "9500",
-    "PROGNAME": "Humanities with Italian",
-    "PROGCODE": "HUMN-HUMI-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "6500",
-    "PROGNAME": "Information Technology",
-    "PROGCODE": "COMP-IT-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "COMP",
-    "DeptName": "Computer Science"
-  },
-  {
-    "AWARDNAME": "LLB",
-    "PROGID": "11000",
-    "PROGNAME": "Intellectual Property",
-    "PROGCODE": "LAW-IPLW-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "5",
-    "DEPTID": "LAW",
-    "DeptName": "Law"
-  },
-  {
-    "AWARDNAME": "MSc",
-    "PROGID": "7900",
-    "PROGNAME": "International Economics",
-    "PROGCODE": "ECO-IECO-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "8",
-    "DEPTID": "ECO",
-    "DeptName": "Economics"
-  },
-  {
-    "AWARDNAME": "LLB",
-    "PROGID": "10900",
-    "PROGNAME": "International Law",
-    "PROGCODE": "LAW-INLW-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "5",
-    "DEPTID": "LAW",
-    "DeptName": "Law"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "11600",
-    "PROGNAME": "International Marketing",
-    "PROGCODE": "MCC-IMKT-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
-  },
-  {
-    "AWARDNAME": "MA",
-    "PROGID": "9600",
-    "PROGNAME": "International Relations",
-    "PROGCODE": "HUMN-INTR-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "7",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "9700",
-    "PROGNAME": "Italian",
-    "PROGCODE": "HUMN-ITAL-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "9800",
-    "PROGNAME": "Japanese",
-    "PROGCODE": "HUMN-JPAN-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "MA",
-    "PROGID": "12000",
-    "PROGNAME": "Journalism",
-    "PROGCODE": "MCC-PAPA-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "7",
-    "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
-  },
-  {
-    "AWARDNAME": "LLB",
-    "PROGID": "11100",
-    "PROGNAME": "Law",
-    "PROGCODE": "LAW-LWLW-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "5",
-    "DEPTID": "LAW",
-    "DeptName": "Law"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "6800",
-    "PROGNAME": "Machine Learning",
-    "PROGCODE": "COMP-ML-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
     "PROGID": "6700",
+    "PROGNAME": "Human-Computer Interaction",
+    "PROGCODE": "COMP-HCI-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "COMP",
+    "DEPTNAME": "Computer Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "10600",
+    "PROGNAME": "Humanities with Italian",
+    "PROGCODE": "HUMN-HUMI-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "6900",
+    "PROGNAME": "Information Technology",
+    "PROGCODE": "COMP-IT-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "COMP",
+    "DEPTNAME": "Computer Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "LLB",
+    "PROGID": "12200",
+    "PROGNAME": "Intellectual Property",
+    "PROGCODE": "LAW-IPLW-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "5",
+    "DEPTID": "LAW",
+    "DEPTNAME": "Law",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "8400",
+    "PROGNAME": "International Economics",
+    "PROGCODE": "ECO-IECO-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "ECO",
+    "DEPTNAME": "Economics",
+    "": ""
+  },
+  {
+    "AWARDNAME": "LLB",
+    "PROGID": "12100",
+    "PROGNAME": "International Law",
+    "PROGCODE": "LAW-INLW-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "5",
+    "DEPTID": "LAW",
+    "DEPTNAME": "Law",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "12800",
+    "PROGNAME": "International Marketing",
+    "PROGCODE": "MCC-IMKT-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "MCC",
+    "DEPTNAME": "Media & Communication",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MA",
+    "PROGID": "10700",
+    "PROGNAME": "International Relations",
+    "PROGCODE": "HUMN-INTR-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "7",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "10800",
+    "PROGNAME": "Italian",
+    "PROGCODE": "HUMN-ITAL-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "10900",
+    "PROGNAME": "Japanese",
+    "PROGCODE": "HUMN-JPAN-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MA",
+    "PROGID": "13200",
+    "PROGNAME": "Journalism",
+    "PROGCODE": "MCC-PAPA-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "7",
+    "DEPTID": "MCC",
+    "DEPTNAME": "Media & Communication",
+    "": ""
+  },
+  {
+    "AWARDNAME": "LLB",
+    "PROGID": "12300",
+    "PROGNAME": "Law",
+    "PROGCODE": "LAW-LWLW-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "5",
+    "DEPTID": "LAW",
+    "DEPTNAME": "Law",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBA",
+    "PROGID": "5000",
+    "PROGNAME": "Leadership & Strategy",
+    "PROGCODE": "BUS-LEAD-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "9",
+    "DEPTID": "BUS",
+    "DEPTNAME": "Business",
+    "": ""
+  },
+  {
+    "AWARDNAME": "DPhil",
+    "PROGID": "11000",
+    "PROGNAME": "Literature and Arts",
+    "PROGCODE": "HUMN-LART-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "12",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "7200",
+    "PROGNAME": "Machine Learning",
+    "PROGCODE": "COMP-ML-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "COMP",
+    "DEPTNAME": "Computer Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "7100",
     "PROGNAME": "Machine Learning & AI",
     "PROGCODE": "COMP-ML-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "8000",
+    "PROGID": "8500",
     "PROGNAME": "MacroEconomics",
     "PROGCODE": "ECO-MECO-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "ECO",
-    "DeptName": "Economics"
+    "DEPTNAME": "Economics",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "4900",
+    "PROGID": "5200",
     "PROGNAME": "Management",
     "PROGCODE": "BUS-MGMT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BUS",
-    "DeptName": "Business"
+    "DEPTNAME": "Business",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1061,109 +1193,131 @@
     "PROGNAME": "Marine Biology",
     "PROGCODE": "BIOS-MABI-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "11900",
+    "PROGID": "13100",
     "PROGNAME": "Marketing",
     "PROGCODE": "MCC-MKTG-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "8700",
+    "PROGID": "9500",
     "PROGNAME": "Material Synthesis",
     "PROGCODE": "ENG-MSYN-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BEng",
+    "PROGID": "9300",
+    "PROGNAME": "Materials Engineering",
+    "PROGCODE": "ENG-MATE-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "3",
+    "DEPTID": "ENG",
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "13200",
+    "PROGID": "15300",
     "PROGNAME": "Mathematical Finance",
     "PROGCODE": "MTST-MTHF-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "13400",
+    "PROGID": "15500",
     "PROGNAME": "Mathematics",
     "PROGCODE": "MTST-MTHM-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "8600",
+    "PROGID": "9400",
     "PROGNAME": "Mechanical Engineering",
     "PROGCODE": "ENG-MCEN-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "ENG",
-    "DeptName": "Engineering"
+    "DEPTNAME": "Engineering",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "11700",
+    "PROGID": "12900",
     "PROGNAME": "Media",
     "PROGCODE": "MCC-MDIA-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "11200",
+    "PROGID": "12400",
     "PROGNAME": "Media Law",
     "PROGCODE": "LAW-MDLW-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "LAW",
-    "DeptName": "Law"
+    "DEPTNAME": "Law",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "11800",
+    "PROGID": "13000",
     "PROGNAME": "Media Production",
     "PROGCODE": "MCC-MDPR-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MEng",
+    "PROGID": "14000",
+    "PROGNAME": "Medical Physics",
+    "PROGCODE": "MED-MDPH-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "4",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "MBBS",
-    "PROGID": "12500",
+    "PROGID": "14100",
     "PROGNAME": "Medicine",
     "PROGCODE": "MED-MEDC-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
     "DEGREETYPEID": "11",
     "DEPTID": "MED",
-    "DeptName": "Medicine"
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1171,43 +1325,43 @@
     "PROGNAME": "Microbiology",
     "PROGCODE": "BIOS-MCBI-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "6600",
+    "PROGID": "7000",
     "PROGNAME": "Mobile Computing",
     "PROGCODE": "COMP-MC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "10000",
-    "PROGNAME": "Modern History",
-    "PROGCODE": "HUMN-MDHI-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "9900",
+    "PROGID": "11100",
     "PROGNAME": "Modern History",
     "PROGCODE": "HUMN-MDHI-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "11200",
+    "PROGNAME": "Modern History",
+    "PROGCODE": "HUMN-MDHI-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
@@ -1215,76 +1369,76 @@
     "PROGNAME": "Molecular Biology",
     "PROGCODE": "BIOS-MB-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "BIOS",
-    "DeptName": "Biological Sciences"
+    "DEPTNAME": "Biological Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "13700",
+    "PROGID": "15800",
     "PROGNAME": "Music",
     "PROGCODE": "PERF-MUSI-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "DEPTNAME": "Performing Arts",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "13800",
+    "PROGID": "15900",
     "PROGNAME": "Music Performance",
     "PROGCODE": "PERF-MUSP-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "DEPTNAME": "Performing Arts",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "13900",
+    "PROGID": "16000",
     "PROGNAME": "Music Technology",
     "PROGCODE": "PERF-MUST-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "DEPTNAME": "Performing Arts",
+    "": ""
   },
   {
-    "AWARDNAME": "LLM",
-    "PROGID": "10100",
+    "AWARDNAME": "MEng",
+    "PROGID": "9600",
+    "PROGNAME": "Nanotechnology Engineering",
+    "PROGCODE": "ENG-NANO-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "4",
+    "DEPTID": "ENG",
+    "DEPTNAME": "Engineering",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MA",
+    "PROGID": "11300",
     "PROGNAME": "NeoClassical History",
     "PROGCODE": "HUMN-NEOH-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "6",
+    "DEGREETYPEID": "7",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "6900",
+    "PROGID": "7300",
     "PROGNAME": "Network Engineering",
     "PROGCODE": "COMP-NE-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
-  },
-  {
-    "AWARDNAME": "DSc",
-    "PROGID": "2600",
-    "PROGNAME": "Neuroscience",
-    "PROGCODE": "BEH-NEUR-PHD",
-    "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "13",
-    "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
@@ -1292,164 +1446,241 @@
     "PROGNAME": "Neuroscience",
     "PROGCODE": "BEH-NEUR-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
-  },
-  {
-    "AWARDNAME": "MSc",
-    "PROGID": "15000",
-    "PROGNAME": "Nuclear Physics",
-    "PROGCODE": "PHAS-NUPH-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "8",
-    "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "12600",
-    "PROGNAME": "Nursing",
-    "PROGCODE": "MED-NURS-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "MED",
-    "DeptName": "Medicine"
-  },
-  {
-    "AWARDNAME": "MSc",
-    "PROGID": "15100",
-    "PROGNAME": "Particle Physics",
-    "PROGCODE": "PHAS-PAPH-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "8",
-    "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "10200",
-    "PROGNAME": "Persian",
-    "PROGCODE": "HUMN-PERS-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "12800",
-    "PROGNAME": "Pharmacy",
-    "PROGCODE": "MED-PHAR-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "MED",
-    "DeptName": "Medicine"
-  },
-  {
-    "AWARDNAME": "MPhil",
-    "PROGID": "16100",
-    "PROGNAME": "Philosophy",
-    "PROGCODE": "PHIL-PHIL-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "10",
-    "DEPTID": "PHIL",
-    "DeptName": "Philosophy"
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "16200",
+    "PROGID": "2600",
+    "PROGNAME": "Neuroscience",
+    "PROGCODE": "BEH-NEUR-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "13",
+    "DEPTID": "BEH",
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "17100",
+    "PROGNAME": "Nuclear Physics",
+    "PROGCODE": "PHAS-NUPH-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "PHAS",
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "14200",
+    "PROGNAME": "Nursing",
+    "PROGCODE": "MED-NURS-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "14300",
+    "PROGNAME": "Ophthalmology",
+    "PROGCODE": "MED-OPTH-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBA",
+    "PROGID": "5300",
+    "PROGNAME": "Organizational behavior",
+    "PROGCODE": "BUS-ORGB-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "9",
+    "DEPTID": "BUS",
+    "DEPTNAME": "Business",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "14400",
+    "PROGNAME": "Otolaryngology",
+    "PROGCODE": "MED-OTOR-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "17200",
+    "PROGNAME": "Particle Physics",
+    "PROGCODE": "PHAS-PAPH-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "PHAS",
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "14500",
+    "PROGNAME": "Pathology",
+    "PROGCODE": "MED-PATH-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "11400",
+    "PROGNAME": "Persian",
+    "PROGCODE": "HUMN-PERS-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "14700",
+    "PROGNAME": "Pharmacology",
+    "PROGCODE": "MED-PHAR-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "14800",
+    "PROGNAME": "Pharmacy",
+    "PROGCODE": "MED-PHAR-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MPhil",
+    "PROGID": "18200",
+    "PROGNAME": "Philosophy",
+    "PROGCODE": "PHIL-PHIL-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "10",
+    "DEPTID": "PHIL",
+    "DEPTNAME": "Philosophy",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "18300",
     "PROGNAME": "Philosophy",
     "PROGCODE": "PHIL-PHIL-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "1",
     "DEPTID": "PHIL",
-    "DeptName": "Philosophy"
+    "DEPTNAME": "Philosophy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "15200",
+    "PROGID": "17300",
     "PROGNAME": "Physics",
     "PROGCODE": "PHAS-PHYS-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "17200",
+    "PROGID": "19300",
     "PROGNAME": "Physiotherapy",
     "PROGCODE": "SPES-PHTH-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "15300",
+    "PROGID": "17400",
     "PROGNAME": "Planetary Science",
     "PROGCODE": "PHAS-PLSC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "16300",
+    "PROGID": "18400",
     "PROGNAME": "Political Philosophy",
-    "PROGCODE": "PHIL-PLPH-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
+    "PROGCODE": "PHIL-PLPH-UG",
+    "STUDYLEVELID": "400",
     "DEGREETYPEID": "1",
     "DEPTID": "PHIL",
-    "DeptName": "Philosophy"
+    "DEPTNAME": "Philosophy",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "14000",
+    "PROGID": "16100",
     "PROGNAME": "Presenting for Radio & TV",
     "PROGCODE": "PERF-PRES-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "DEPTNAME": "Performing Arts",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "12200",
+    "PROGID": "13400",
     "PROGNAME": "Print & Web Media Publishing",
     "PROGCODE": "MCC-PWMP-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
     "PROGID": "1700",
-    "PROGNAME": "Professional Make-up and Special Effects",
+    "PROGNAME": "Professional Make-up & Special Effects",
     "PROGCODE": "ART-PMSE-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MBBS",
+    "PROGID": "15000",
+    "PROGNAME": "Psychiatry",
+    "PROGCODE": "MED-PSYC-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "11",
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1457,54 +1688,54 @@
     "PROGNAME": "Psychology",
     "PROGCODE": "BEH-PYSC-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "12700",
+    "PROGID": "14600",
     "PROGNAME": "Public Health",
     "PROGCODE": "MED-PBHE-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MED",
-    "DeptName": "Medicine"
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "12900",
+    "PROGID": "14900",
     "PROGNAME": "Public Health & Global Policy",
     "PROGCODE": "MED-PHGP-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
+    "DEGREETYPEID": "13",
     "DEPTID": "MED",
-    "DeptName": "Medicine"
+    "DEPTNAME": "Medicine",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "12100",
+    "PROGID": "13300",
     "PROGNAME": "Public Relations",
     "PROGCODE": "MCC-PUBR-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "11300",
+    "PROGID": "12500",
     "PROGNAME": "Pure Mathematics",
     "PROGCODE": "MATH-PMTH-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1512,54 +1743,65 @@
     "PROGNAME": "Quantity Surveying",
     "PROGCODE": "BENV-QASV-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "MSc",
-    "PROGID": "15400",
+    "PROGID": "17500",
     "PROGNAME": "Quantum Mechanics",
     "PROGCODE": "PHAS-QTMC-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "8",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "12300",
+    "PROGID": "13500",
     "PROGNAME": "Radio Production",
     "PROGCODE": "MCC-RAPR-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "MCC",
-    "DeptName": "Media and Communication"
+    "DEPTNAME": "Media & Communication",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "7100",
+    "PROGID": "7600",
     "PROGNAME": "Robotics",
     "PROGCODE": "COMP-ROBO-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BEng",
+    "PROGID": "7400",
+    "PROGNAME": "Robotics and Artificial Intelligence",
+    "PROGCODE": "COMP-RAI-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "3",
+    "DEPTID": "",
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "10300",
+    "PROGID": "11500",
     "PROGNAME": "Russian",
     "PROGCODE": "HUMN-RUSS-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
@@ -1567,21 +1809,21 @@
     "PROGNAME": "Sculpture",
     "PROGCODE": "ART-SCUL-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "14100",
+    "PROGID": "16200",
     "PROGNAME": "Set Design",
     "PROGCODE": "PERF-SETD-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "DEPTNAME": "Performing Arts",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1589,164 +1831,153 @@
     "PROGNAME": "Social Psychology",
     "PROGCODE": "BEH-SCPY-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BEH",
-    "DeptName": "Behavioral Sciences"
+    "DEPTNAME": "Behavioral Sciences",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "10400",
+    "PROGID": "11600",
     "PROGNAME": "Sociology",
     "PROGCODE": "HUMN-SOCI-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
   },
   {
     "AWARDNAME": "MA",
-    "PROGID": "7200",
+    "PROGID": "7700",
     "PROGNAME": "Software Engineering",
     "PROGCODE": "COMP-SFEG-PG",
     "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
     "DEGREETYPEID": "7",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "6400",
+    "PROGID": "6800",
     "PROGNAME": "Software Engineering for IOT",
     "PROGCODE": "COMP-IOT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
-  },
-  {
-    "AWARDNAME": "MA",
-    "PROGID": "15500",
-    "PROGNAME": "Solid State Physics",
-    "PROGCODE": "PHAS-SSPH-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "7",
-    "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "14900",
-    "PROGNAME": "Space Science",
-    "PROGCODE": "PHAS-NASA-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
-  },
-  {
-    "AWARDNAME": "BA",
-    "PROGID": "10500",
-    "PROGNAME": "Spanish",
-    "PROGCODE": "HUMN-SPAN-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "1",
-    "DEPTID": "HUMN",
-    "DeptName": "Humanities & Social Science"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "16900",
-    "PROGNAME": "Sports Nutrition",
-    "PROGCODE": "SPES-NUTR-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "17100",
-    "PROGNAME": "Sports Nutrition",
-    "PROGCODE": "SPES-NUTR-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
-  },
-  {
-    "AWARDNAME": "MSc",
-    "PROGID": "17000",
-    "PROGNAME": "Sports Nutrition",
-    "PROGCODE": "SPES-NUTR-PHD",
-    "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "8",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
-  },
-  {
-    "AWARDNAME": "BSc",
-    "PROGID": "17500",
-    "PROGNAME": "Sports Science",
-    "PROGCODE": "SPES-SPORT-UG",
-    "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
-    "DEGREETYPEID": "2",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
-  },
-  {
-    "AWARDNAME": "MSc",
-    "PROGID": "17300",
-    "PROGNAME": "Sports Science",
-    "PROGCODE": "SPES-SPORT-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "8",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEPTNAME": "Computer Science",
+    "": ""
   },
   {
     "AWARDNAME": "PhD",
-    "PROGID": "17400",
-    "PROGNAME": "Sports Science",
-    "PROGCODE": "SPES-SPORT-PHD",
+    "PROGID": "17600",
+    "PROGNAME": "Solid State Physics",
+    "PROGCODE": "PHAS-SSPH-PHD",
     "STUDYLEVELID": "800",
-    "STUDYLEVELNAME": "Doctoral",
-    "DEGREETYPEID": "14",
-    "DEPTID": "SPES",
-    "DeptName": "Sports & Exercise Sciences"
+    "DEGREETYPEID": "13",
+    "DEPTID": "PHAS",
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
-    "AWARDNAME": "MSc",
-    "PROGID": "14200",
-    "PROGNAME": "Stage Directing",
-    "PROGCODE": "PERF-STAGD-PG",
-    "STUDYLEVELID": "700",
-    "STUDYLEVELNAME": "PG",
-    "DEGREETYPEID": "8",
-    "DEPTID": "PERF",
-    "DeptName": "Performing Arts"
+    "AWARDNAME": "BSc",
+    "PROGID": "17000",
+    "PROGNAME": "Space Science",
+    "PROGCODE": "PHAS-NASA-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "PHAS",
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "13500",
+    "PROGID": "11700",
+    "PROGNAME": "Spanish",
+    "PROGCODE": "HUMN-SPAN-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "1",
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "19000",
+    "PROGNAME": "Sports Nutrition",
+    "PROGCODE": "SPES-NUTR-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "PhD",
+    "PROGID": "19100",
+    "PROGNAME": "Sports Nutrition",
+    "PROGCODE": "SPES-NUTR-PHD",
+    "STUDYLEVELID": "800",
+    "DEGREETYPEID": "13",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "19200",
+    "PROGNAME": "Sports Nutrition",
+    "PROGCODE": "SPES-NUTR-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "19400",
+    "PROGNAME": "Sports Science",
+    "PROGCODE": "SPES-SPORT-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BSc",
+    "PROGID": "19600",
+    "PROGNAME": "Sports Science",
+    "PROGCODE": "SPES-SPORT-UG",
+    "STUDYLEVELID": "400",
+    "DEGREETYPEID": "2",
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences",
+    "": ""
+  },
+  {
+    "AWARDNAME": "MSc",
+    "PROGID": "16300",
+    "PROGNAME": "Stage Directing",
+    "PROGCODE": "PERF-STAGD-PG",
+    "STUDYLEVELID": "700",
+    "DEGREETYPEID": "8",
+    "DEPTID": "PERF",
+    "DEPTNAME": "Performing Arts",
+    "": ""
+  },
+  {
+    "AWARDNAME": "BA",
+    "PROGID": "15600",
     "PROGNAME": "Statistics",
     "PROGCODE": "MTST-STAT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "MATH",
-    "DeptName": "Mathematics and Statistics"
+    "DEPTNAME": "Mathematics & Statistics",
+    "": ""
   },
   {
     "AWARDNAME": "BEng",
@@ -1754,10 +1985,10 @@
     "PROGNAME": "Sustainable Design",
     "PROGCODE": "BENV-SSDG-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "3",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
@@ -1765,21 +1996,21 @@
     "PROGNAME": "Theatrical Make-up",
     "PROGCODE": "ART-TMA-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "BA",
-    "PROGID": "15700",
+    "PROGID": "17800",
     "PROGNAME": "Thermodynamics",
     "PROGCODE": "PHAS-THDY-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "1",
     "DEPTID": "PHAS",
-    "DeptName": "Physics and Astronomy"
+    "DEPTNAME": "Physics & Astronomy",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1787,10 +2018,10 @@
     "PROGNAME": "Urban Planning",
     "PROGCODE": "BENV-UBPL-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1798,10 +2029,10 @@
     "PROGNAME": "Visual Effects for Film & TV",
     "PROGCODE": "ART-VSFT-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "ART",
-    "DeptName": "Art & Design"
+    "DEPTNAME": "Art & Design",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
@@ -1809,20 +2040,20 @@
     "PROGNAME": "Waste Management",
     "PROGCODE": "BENV-WSGM-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "BENV",
-    "DeptName": "Built Environment"
+    "DEPTNAME": "Built Environment",
+    "": ""
   },
   {
     "AWARDNAME": "BSc",
-    "PROGID": "7300",
+    "PROGID": "7800",
     "PROGNAME": "Web Development",
     "PROGCODE": "COMP-WD-UG",
     "STUDYLEVELID": "400",
-    "STUDYLEVELNAME": "UG",
     "DEGREETYPEID": "2",
     "DEPTID": "COMP",
-    "DeptName": "Computer Science"
+    "DEPTNAME": "Computer Science",
+    "": ""
   }
 ]

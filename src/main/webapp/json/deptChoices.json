@@ -1,0 +1,82 @@
+[
+  {
+    "DEPTID": "ART",
+    "DEPTNAME": "Art & Design"
+  },
+  {
+    "DEPTID": "BEH",
+    "DEPTNAME": "Behavioral Sciences"
+  },
+  {
+    "DEPTID": "BENV",
+    "DEPTNAME": "Built Environment"
+  },
+  {
+    "DEPTID": "BIOS",
+    "DEPTNAME": "Biological Sciences"
+  },
+  {
+    "DEPTID": "BUS",
+    "DEPTNAME": "Business"
+  },
+  {
+    "DEPTID": "COMP",
+    "DEPTNAME": "Computer Science"
+  },
+  {
+    "DEPTID": "ECO",
+    "DEPTNAME": "Economics"
+  },
+  {
+    "DEPTID": "ENG",
+    "DEPTNAME": "Engineering"
+  },
+  {
+    "DEPTID": "EST",
+    "DEPTNAME": "Estates"
+  },
+  {
+    "DEPTID": "HEAD",
+    "DEPTNAME": "Head Office"
+  },
+  {
+    "DEPTID": "HUMN",
+    "DEPTNAME": "Humanities & Social Science"
+  },
+  {
+    "DEPTID": "LAW",
+    "DEPTNAME": "Law"
+  },
+  {
+    "DEPTID": "MATH",
+    "DEPTNAME": "Mathematics & Statistics"
+  },
+  {
+    "DEPTID": "MCC",
+    "DEPTNAME": "Media & Communication"
+  },
+  {
+    "DEPTID": "MED",
+    "DEPTNAME": "Medicine"
+  },
+  {
+    "DEPTID": "PERF",
+    "DEPTNAME": "Performing Arts"
+  },
+  {
+    "DEPTID": "PHAS",
+    "DEPTNAME": "Physics & Astronomy"
+  },
+  {
+    "DEPTID": "PHIL",
+    "DEPTNAME": "Philosophy"
+  },
+  {
+    "DEPTID": "REGI",
+    "DEPTNAME": "Regional Office"
+  },
+  {
+    "DEPTID": "SPES",
+    "DEPTNAME": "Sports & Exercise Sciences"
+  }
+]

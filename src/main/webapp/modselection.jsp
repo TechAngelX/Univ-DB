@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration | Univ-DB</title>
+    <title>Module Selection | Univ-DB</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body, html {
@@ -34,8 +33,8 @@
     <div class="form-box">
         <h1 class="text-center">Univ-DB</h1>
         <form id="registrationForm" action="RegisterServlet" method="POST">
-            <h3 class="text-center">Registration</h3>
-            <p class="text-center">Please complete the form to create an account</p>
+            <h3 class="text-center">Module Selection</h3>
+            <p class="text-center">Please Choose a Module:</p>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -97,14 +96,6 @@
                 <p id="staffrole-error" class="text-danger"></p>
             </div>
 
-            <div class="form-group" id="dept-group" style="display: none;">
-                <label for="dept">Department:</label>
-                <select class="form-control" id="dept" name="dept">
-                    <option value="">Select Department</option>
-                </select>
-                <p id="dept-error" class="text-danger"></p>
-            </div>
-
             <button type="submit" class="btn btn-primary btn-block">Register</button>
         </form>
     </div>
@@ -116,11 +107,9 @@
         const awardGroup = document.getElementById("award-group");
         const programmeGroup = document.getElementById("programme-group");
         const staffRoleGroup = document.getElementById("staffrole-group");
-        const deptGroup = document.getElementById("dept-group");
         const awardSelect = document.getElementById("award");
         const programmeSelect = document.getElementById("programme");
         const staffRoleSelect = document.getElementById("staffrole");
-        const deptSelect = document.getElementById("dept");
 
         // Handle account type changes
         accTypeSelect.addEventListener("change", function() {
@@ -128,19 +117,14 @@
                 awardGroup.style.display = "block";
                 programmeGroup.style.display = "block";
                 staffRoleGroup.style.display = "none";
-                deptGroup.style.display = "none";
-
             } else if (accTypeSelect.value === "2") { // Staff selected
                 awardGroup.style.display = "none";
                 programmeGroup.style.display = "none";
                 staffRoleGroup.style.display = "block";
-                deptGroup.style.display = "block";
-
             } else {
                 awardGroup.style.display = "none";
                 programmeGroup.style.display = "none";
                 staffRoleGroup.style.display = "none";
-                deptGroup.style.display = "none";
             }
         });
 
@@ -188,6 +172,7 @@
         fetch("StaffChoicesServlet")
             .then(response => response.json())
             .then(data => {
+                // Assuming data is directly an array of staff roles
                 const staffRoles = data || [];
 
                 // Populate staff roles dropdown
@@ -200,22 +185,9 @@
                 });
             })
             .catch(error => console.error('Error fetching staff roles:', error));
-
-        // Fetch Department choices from the servlet
-        fetch("DeptChoicesServlet")
-            .then(response => response.json())
-            .then(data => {
-                deptSelect.innerHTML = '<option value="">Select Department</option>';
-                data.forEach(department => {
-                    const option = document.createElement('option');
-                    option.value = department.DEPTNAME;
-                    option.textContent = department.DEPTNAME;
-                    deptSelect.appendChild(option);
-                });
-            })
-            .catch(error => console.error('Error fetching department choices:', error));
     });
 </script>
 
+!DOCTYPE html>
 </body>
 </html>

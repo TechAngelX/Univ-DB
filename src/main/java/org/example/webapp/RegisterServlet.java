@@ -24,6 +24,7 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Retrieve parameters and handle null or empty values
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String pword = request.getParameter("pword");
@@ -33,6 +34,17 @@ public class RegisterServlet extends HttpServlet {
         String degreetypeid = request.getParameter("degreetypeid"); // Hardcoded value for student (BA, MSc etc)
         String progid = request.getParameter("progid"); // Hardcoded value for the programme (Marketing, Computer Science etc)
         String studylevelid = request.getParameter("studylevelid"); // Hardcoded study level id for students
+
+        // Handle possible null values for parameters
+        fname = fname != null ? fname.trim() : "";
+        lname = lname != null ? lname.trim() : "";
+        pword = pword != null ? pword.trim() : "";
+        pwordConfirm = pwordConfirm != null ? pwordConfirm.trim() : "";
+        accType = accType != null ? accType.trim() : "";
+        staffrole = staffrole != null ? staffrole.trim() : "";
+        degreetypeid = degreetypeid != null ? degreetypeid.trim() : "0";
+        progid = progid != null ? progid.trim() : "0";
+        studylevelid = studylevelid != null ? studylevelid.trim() : "0";
 
         String username = generateUsername(fname, lname);
 
@@ -66,7 +78,7 @@ public class RegisterServlet extends HttpServlet {
         String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME, PWORD, ACCTYPEID) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseUtils.getConnection();
-             PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc)) {
+             PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc, PreparedStatement.RETURN_GENERATED_KEYS)) {
 
             // Insert into USER_ACC table
             stmtUserAcc.setString(1, fname);
@@ -79,8 +91,16 @@ public class RegisterServlet extends HttpServlet {
             // Execute the user account insertion
             stmtUserAcc.executeUpdate();
 
+            // Retrieve the generated user ID
+            ResultSet generatedKeys = stmtUserAcc.getGeneratedKeys();
+            if (!generatedKeys.next()) {
+                throw new SQLException("Creating user failed, no ID obtained.");
+            }
+            int userId = generatedKeys.getInt(1);
+
             if ("1".equals(accType)) { // Student
-                String sqlInsertStudent = "INSERT INTO STUDENT (STUDENTID, FNAME, LNAME, EMAIL, PROGID, DEGREETYPEID, STUDYLEVELID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                // Prepare SQL for inserting a student
+                String sqlInsertStudent = "INSERT INTO STUDENT (STUDENTID, FNAME, LNAME, EMAIL, PROGID, DEGREETYPEID, STUDYLEVELID, USERID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 try (PreparedStatement stmtStudent = conn.prepareStatement(sqlInsertStudent)) {
                     stmtStudent.setInt(1, generateStudentNumber()); // Generate a student number
                     stmtStudent.setString(2, fname);
@@ -89,24 +109,22 @@ public class RegisterServlet extends HttpServlet {
                     stmtStudent.setInt(5, Integer.parseInt(progid));  // Use hardcoded PROGID
                     stmtStudent.setInt(6, Integer.parseInt(degreetypeid));  // Use hardcoded DEGREETYPEID
                     stmtStudent.setInt(7, Integer.parseInt(studylevelid));  // Use hardcoded STUDYLEVELID
+                    stmtStudent.setInt(8, userId); // Link student record to the account user
 
                     stmtStudent.executeUpdate();
                 }
             } else if ("2".equals(accType)) { // Staff
-                String sqlStaffRoleCheck = "SELECT STAFFROLEID FROM STAFFROLE WHERE STAFFROLEID = ?";
-                String sqlInsertStaffRole = "INSERT INTO STAFFROLE (STAFFROLEID, STAFFROLENAME) VALUES (?, ?)";
+                // Prepare SQL for inserting a staff role
+                String sqlInsertStaff = "INSERT INTO STAFF (STAFFID, USERID, FNAME, LNAME, EMAIL, STAFFROLEID, DEPTID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                try (PreparedStatement stmtInsertStaff = conn.prepareStatement(sqlInsertStaff)) {
+                    stmtInsertStaff.setString(1, generateUsername(fname, lname)); // Generate a staff ID
+                    stmtInsertStaff.setInt(2, userId); // Link staff record to the account user
+                    stmtInsertStaff.setString(3, fname);
+                    stmtInsertStaff.setString(4, lname);
+                    stmtInsertStaff.setString(5, email);
+                    stmtInsertStaff.setString(6, staffrole); // Insert the staff role ID
 
-                try (PreparedStatement stmtCheckStaffRole = conn.prepareStatement(sqlStaffRoleCheck);
-                     PreparedStatement stmtInsertStaffRole = conn.prepareStatement(sqlInsertStaffRole)) {
-
-                    stmtCheckStaffRole.setString(1, staffrole);
-                    ResultSet rsStaffRole = stmtCheckStaffRole.executeQuery();
-
-                    if (!rsStaffRole.next()) {
-                        stmtInsertStaffRole.setString(1, staffrole);
-                        stmtInsertStaffRole.setString(2, request.getParameter("staffRoleName")); // Assuming you have staff role name in the form
-                        stmtInsertStaffRole.executeUpdate();
-                    }
+                    stmtInsertStaff.executeUpdate();
                 }
             }
 
