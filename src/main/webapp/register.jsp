@@ -75,7 +75,7 @@
 
             <div class="form-group" id="award-group" style="display: none;">
                 <label for="award">Award:</label>
-                <select class="form-control" id="award" name="award">
+                <select class="form-control" id="award" name="awardname">
                     <option value="">Select Award</option>
                 </select>
                 <p id="award-error" class="text-danger"></p>
@@ -106,7 +106,7 @@
             </div>
 
             <!-- Hidden data-->
-            <!-- Hidden data -->
+
             <input type="hidden" id="progid" name="progid">
             <input type="hidden" id="studylevelid" name="studylevelid">
             <input type="hidden" id="degreetypeid" name="degreetypeid">
@@ -130,6 +130,13 @@
         const staffRoleSelect = document.getElementById("staffrole");
         const deptSelect = document.getElementById("dept");
 
+        // Hidden input fields
+        const progIdInput = document.getElementById("progid");
+        const studyLevelIdInput = document.getElementById("studylevelid");
+        const degreeTypeIdInput = document.getElementById("degreetypeid");
+        const deptIdInput = document.getElementById("deptid");
+        const staffRoleIdInput = document.getElementById("staffroleid");
+
         // Handle account type changes
         accTypeSelect.addEventListener("change", function() {
             if (accTypeSelect.value === "1") { // Student selected
@@ -150,36 +157,33 @@
             }
         });
 
-        // Fetch awards and programmes from the servlet
+        // Fetch student choices
         fetch("StudentChoicesServlet")
             .then(response => response.json())
             .then(data => {
-                const awards = {};
-
-                // Group the data by award name
+                const choices = {};
                 data.forEach(choice => {
-                    if (!awards[choice.AWARDNAME]) {
-                        awards[choice.AWARDNAME] = [];
+                    if (!choices[choice.AWARDNAME]) {
+                        choices[choice.AWARDNAME] = [];
                     }
-                    awards[choice.AWARDNAME].push(choice);
+                    choices[choice.AWARDNAME].push(choice);
                 });
 
                 // Populate awards dropdown
                 awardSelect.innerHTML = '<option value="">Select Award</option>';
-                Object.keys(awards).forEach(award => {
+                Object.keys(choices).forEach(award => {
                     const option = document.createElement('option');
                     option.value = award;
                     option.textContent = award;
                     awardSelect.appendChild(option);
                 });
 
-                // Update programmes dynamically when an award is selected
+                // Update programmes based on selected award
                 awardSelect.addEventListener("change", function() {
                     const selectedAward = this.value;
                     programmeSelect.innerHTML = '<option value="">Select Programme</option>';
-
-                    if (awards[selectedAward]) {
-                        awards[selectedAward].forEach(programme => {
+                    if (choices[selectedAward]) {
+                        choices[selectedAward].forEach(programme => {
                             const option = document.createElement('option');
                             option.value = programme.PROGID;
                             option.textContent = programme.PROGNAME;
@@ -187,27 +191,47 @@
                         });
                     }
                 });
+
+                // Set hidden fields based on selected programme
+                programmeSelect.addEventListener("change", function() {
+                    const selectedProgId = this.value;
+                    const selectedChoice = data.find(choice => choice.PROGID === selectedProgId);
+                    if (selectedChoice) {
+                        progIdInput.value = selectedChoice.PROGID;
+                        studyLevelIdInput.value = selectedChoice.STUDYLEVELID;
+                        degreeTypeIdInput.value = selectedChoice.DEGREETYPEID;
+                        deptIdInput.value = selectedChoice.DEPTID;
+                    } else {
+                        progIdInput.value = '';
+                        studyLevelIdInput.value = '';
+                        degreeTypeIdInput.value = '';
+                        deptIdInput.value = '';
+                    }
+                });
             })
             .catch(error => console.error('Error fetching student choices:', error));
 
-        // Fetch Staff Roles from the servlet
+        // Fetch staff roles
         fetch("StaffChoicesServlet")
             .then(response => response.json())
             .then(data => {
-                const staffRoles = data || [];
-
-                // Populate staff roles dropdown
                 staffRoleSelect.innerHTML = '<option value="">Select Role</option>';
-                staffRoles.forEach(role => {
+                data.forEach(role => {
                     const option = document.createElement('option');
                     option.value = role.STAFFROLEID;
                     option.textContent = role.STAFFROLENAME;
                     staffRoleSelect.appendChild(option);
                 });
+
+                // Update hidden field based on selected staff role
+                staffRoleSelect.addEventListener("change", function() {
+                    const selectedRoleId = this.value;
+                    staffRoleIdInput.value = selectedRoleId;
+                });
             })
             .catch(error => console.error('Error fetching staff roles:', error));
 
-        // Fetch Department choices from the servlet
+        // Fetch departments
         fetch("DeptChoicesServlet")
             .then(response => response.json())
             .then(data => {
@@ -218,9 +242,17 @@
                     option.textContent = department.DEPTNAME;
                     deptSelect.appendChild(option);
                 });
+
+                // Update hidden field based on selected department
+                deptSelect.addEventListener("change", function() {
+                    const selectedDeptId = this.value;
+                    deptIdInput.value = selectedDeptId;
+                });
             })
             .catch(error => console.error('Error fetching departments:', error));
     });
+
+
 </script>
 </body>
 </html>
