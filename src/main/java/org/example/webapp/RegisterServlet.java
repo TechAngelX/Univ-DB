@@ -17,39 +17,30 @@ import java.util.Random;
 
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
-    private Random random = new Random();
-
+    private final Random random = new Random();
     private final String emailStudDomain = "@std.techangelx.ac.uk";
     private final String emailStaffDomain = "@techangelx.ac.uk";
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Retrieve parameters and handle null or empty values
-        String fname = request.getParameter("fname");
-        String lname = request.getParameter("lname");
-        String pword = request.getParameter("pword");
-        String pwordConfirm = request.getParameter("pwordConfirm");
-        String accType = request.getParameter("accType"); // Holds in the Account table the type of user: 1 for student, 2 for staff
-        String staffrole = request.getParameter("staffrole"); // 5 character VARCHAR for staff role
-        String degreetypeid = request.getParameter("degreetypeid"); // Hardcoded value for student (BA, MSc etc)
-        String progid = request.getParameter("progid"); // Hardcoded value for the programme (Marketing, Computer Science etc)
-        String studylevelid = request.getParameter("studylevelid"); // Hardcoded study level id for students
+        String fname = getParameter(request, "fname");
+        String lname = getParameter(request, "lname");
+        String pword = getParameter(request, "pword");
+        String pwordConfirm = getParameter(request, "pwordConfirm");
 
-        // Handle possible null values for parameters
-        fname = fname != null ? fname.trim() : "";
-        lname = lname != null ? lname.trim() : "";
-        pword = pword != null ? pword.trim() : "";
-        pwordConfirm = pwordConfirm != null ? pwordConfirm.trim() : "";
-        accType = accType != null ? accType.trim() : "";
-        staffrole = staffrole != null ? staffrole.trim() : "";
-        degreetypeid = degreetypeid != null ? degreetypeid.trim() : "0";
-        progid = progid != null ? progid.trim() : "0";
-        studylevelid = studylevelid != null ? studylevelid.trim() : "0";
+        // Retrieve integer parameters and handle parsing
+        int accType = getParameterAsInt(request, "accType", 0);
+        int degreetypeid = getParameterAsInt(request, "degreetypeid", 0);
+        int studylevelid = getParameterAsInt(request, "studylevelid", 0);
 
-        String username = generateUsername(fname, lname);
+        // Retrieve string parameters
+        String staffroleid = getParameter(request, "staffroleid", "");
+        String deptid = getParameter(request, "deptid", "");
+        String progid = getParameter(request, "progid", "");
+
 
         // REGISTRATION FORM VALIDATION
-        //-------------------------------------------------------------------------------------------------------------------------
         Map<String, String> errors = RegFormValidator.validateForm(fname, lname, pword, pwordConfirm);
 
         if (!errors.isEmpty()) {
@@ -64,17 +55,16 @@ public class RegisterServlet extends HttpServlet {
 
         // Determine the email domain based on the account type
         String email;
-        if ("1".equals(accType)) { // Student
-            email = username + emailStudDomain;
-        } else if ("2".equals(accType)) { // Staff
-            email = username + emailStaffDomain;
+        if (accType == 1) { // Student
+            email = generateUsername(fname, lname) + emailStudDomain;
+        } else if (accType == 2) { // Staff
+            email = generateUsername(fname, lname) + emailStaffDomain;
         } else {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid account type");
             return;
         }
 
         // SQL STATEMENTS FOR INSERTION
-        //-------------------------------------------------------------------------------------------------------------------------
         String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME, PWORD, ACCTYPEID) VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseUtils.getConnection();
@@ -84,47 +74,49 @@ public class RegisterServlet extends HttpServlet {
             stmtUserAcc.setString(1, fname);
             stmtUserAcc.setString(2, lname);
             stmtUserAcc.setString(3, email);
-            stmtUserAcc.setString(4, username);
+            stmtUserAcc.setString(4, generateUsername(fname, lname));
             stmtUserAcc.setString(5, hashedPassword);
-            stmtUserAcc.setInt(6, Integer.parseInt(accType));
+            stmtUserAcc.setInt(6, accType);
 
             // Execute the user account insertion
-            stmtUserAcc.executeUpdate();
-
-            // Retrieve the generated user ID
-            ResultSet generatedKeys = stmtUserAcc.getGeneratedKeys();
-            if (!generatedKeys.next()) {
-                throw new SQLException("Creating user failed, no ID obtained.");
+            int rowsAffected = stmtUserAcc.executeUpdate();
+            if (rowsAffected == 0) {
+                throw new SQLException("Creating user account failed, no rows affected.");
             }
-            int userId = generatedKeys.getInt(1);
 
-            if ("1".equals(accType)) { // Student
-                // Prepare SQL for inserting a student
-                String sqlInsertStudent = "INSERT INTO STUDENT (STUDENTID, FNAME, LNAME, EMAIL, PROGID, DEGREETYPEID, STUDYLEVELID, USERID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+//             Retrieve the generated user ID
+//
+
+            if (accType == 1) { // Student
+                String sqlInsertStudent = "INSERT INTO STUDENT (STUDENTID, FNAME, LNAME, EMAIL, PROGID, DEGREETYPEID, STUDYLEVELID) VALUES (?, ?, ?, ?, ?, ?, ?)";
                 try (PreparedStatement stmtStudent = conn.prepareStatement(sqlInsertStudent)) {
-                    stmtStudent.setInt(1, generateStudentNumber()); // Generate a student number
+                    stmtStudent.setInt(1, generateStudentNumber());
                     stmtStudent.setString(2, fname);
                     stmtStudent.setString(3, lname);
                     stmtStudent.setString(4, email);
-                    stmtStudent.setInt(5, Integer.parseInt(progid));  // Use hardcoded PROGID
-                    stmtStudent.setInt(6, Integer.parseInt(degreetypeid));  // Use hardcoded DEGREETYPEID
-                    stmtStudent.setInt(7, Integer.parseInt(studylevelid));  // Use hardcoded STUDYLEVELID
-                    stmtStudent.setInt(8, userId); // Link student record to the account user
+                    stmtStudent.setString(5, progid);
+                    stmtStudent.setInt(6, degreetypeid);
+                    stmtStudent.setInt(7, studylevelid);
+//                    stmtStudent.setInt(8, userId);
 
                     stmtStudent.executeUpdate();
                 }
-            } else if ("2".equals(accType)) { // Staff
-                // Prepare SQL for inserting a staff role
-                String sqlInsertStaff = "INSERT INTO STAFF (STAFFID, USERID, FNAME, LNAME, EMAIL, STAFFROLEID, DEPTID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            } else if (accType == 2) { // Staff
+                String sqlInsertStaff = "INSERT INTO STAFF (STAFFID, STAFFROLEID, EMAIL, FNAME, LNAME, DEPTID,USERID) VALUES (?,?, ?, ?, ?, ?, ?)";
                 try (PreparedStatement stmtInsertStaff = conn.prepareStatement(sqlInsertStaff)) {
-                    stmtInsertStaff.setString(1, generateUsername(fname, lname)); // Generate a staff ID
-                    stmtInsertStaff.setInt(2, userId); // Link staff record to the account user
-                    stmtInsertStaff.setString(3, fname);
-                    stmtInsertStaff.setString(4, lname);
-                    stmtInsertStaff.setString(5, email);
-                    stmtInsertStaff.setString(6, staffrole); // Insert the staff role ID
+                    stmtInsertStaff.setString(1, generateStaffID(fname, lname));
+                    stmtInsertStaff.setString(2, staffroleid);
+                    stmtInsertStaff.setString(3, email);
+                    stmtInsertStaff.setString(4, fname);
+                    stmtInsertStaff.setString(5, lname);
+                    stmtInsertStaff.setString(6, deptid);
+//                    stmtInsertStaff.setInt(7, userId);
 
-                    stmtInsertStaff.executeUpdate();
+
+                    int rowsAffectedStaff = stmtInsertStaff.executeUpdate();
+                    if (rowsAffectedStaff == 0) {
+                        throw new SQLException("Creating staff record failed, no rows affected.");
+                    }
                 }
             }
 
@@ -137,6 +129,28 @@ public class RegisterServlet extends HttpServlet {
         }
     }
 
+    // Helper method to retrieve string parameters
+    private String getParameter(HttpServletRequest request, String name) {
+        return getParameter(request, name, "");
+    }
+
+    // Overloaded helper method to retrieve string parameters with a default value
+    private String getParameter(HttpServletRequest request, String name, String defaultValue) {
+        String value = request.getParameter(name);
+        return value != null ? value.trim() : defaultValue;
+    }
+
+    // Helper method to retrieve integer parameters with a default value
+    private int getParameterAsInt(HttpServletRequest request, String name, int defaultValue) {
+        String value = request.getParameter(name);
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
+
+    // Generates a unique username based on the user's first and last names
     private String generateUsername(String fname, String lname) {
         String firstInitial = !fname.isEmpty() ? String.valueOf(fname.charAt(0)) : "";
         String lastFour = lname.length() >= 4 ? lname.substring(0, 4) : lname;
@@ -148,6 +162,19 @@ public class RegisterServlet extends HttpServlet {
         return (firstInitial + lastFour + randomNumbers).toLowerCase();
     }
 
+    // Generates a unique staff ID based on the user's first and last names
+    private String generateStaffID(String fname, String lname) {
+        String firstInitial = !fname.isEmpty() ? String.valueOf(fname.charAt(0)) : "";
+        String lastFour = lname.length() >= 4 ? lname.substring(0, 4) : lname;
+        String randomNumbers;
+        do {
+            randomNumbers = String.format("%03d", random.nextInt(1000));
+        } while (randomNumbers.startsWith("1") || randomNumbers.startsWith("0"));
+
+        return (firstInitial + lastFour + randomNumbers).toLowerCase();
+    }
+
+    // Generates a random student number
     private int generateStudentNumber() {
         return random.nextInt((25168942 - 2001852) + 1) + 2001852;
     }

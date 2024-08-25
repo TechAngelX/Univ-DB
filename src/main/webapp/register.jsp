@@ -105,6 +105,14 @@
                 <p id="dept-error" class="text-danger"></p>
             </div>
 
+            <!-- Hidden data-->
+            <!-- Hidden data -->
+            <input type="hidden" id="progid" name="progid">
+            <input type="hidden" id="studylevelid" name="studylevelid">
+            <input type="hidden" id="degreetypeid" name="degreetypeid">
+            <input type="hidden" id="deptid" name="deptid">
+            <input type="hidden" id="staffroleid" name="staffroleid">
+
             <button type="submit" class="btn btn-primary btn-block">Register</button>
         </form>
     </div>
@@ -129,13 +137,11 @@
                 programmeGroup.style.display = "block";
                 staffRoleGroup.style.display = "none";
                 deptGroup.style.display = "none";
-
             } else if (accTypeSelect.value === "2") { // Staff selected
                 awardGroup.style.display = "none";
                 programmeGroup.style.display = "none";
                 staffRoleGroup.style.display = "block";
                 deptGroup.style.display = "block";
-
             } else {
                 awardGroup.style.display = "none";
                 programmeGroup.style.display = "none";
@@ -208,14 +214,13 @@
                 deptSelect.innerHTML = '<option value="">Select Department</option>';
                 data.forEach(department => {
                     const option = document.createElement('option');
-                    option.value = department.DEPTNAME;
+                    option.value = department.DEPTID;
                     option.textContent = department.DEPTNAME;
                     deptSelect.appendChild(option);
                 });
             })
-            .catch(error => console.error('Error fetching department choices:', error));
+            .catch(error => console.error('Error fetching departments:', error));
     });
 </script>
-
 </body>
 </html>
