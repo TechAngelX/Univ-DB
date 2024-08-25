@@ -6,12 +6,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.mindrot.jbcrypt.BCrypt;
+import oracle.jdbc.OracleCallableStatement;
+import oracle.jdbc.OracleTypes;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+
 import java.util.Map;
 import java.util.Random;
 
@@ -40,7 +40,6 @@ public class RegisterServlet extends HttpServlet {
         String progid = getParameter(request, "progid", "");
         String awardname = getParameter(request, "awardname", "");
 
-
         // REGISTRATION FORM VALIDATION
         Map<String, String> errors = RegFormValidator.validateForm(fname, lname, pword, pwordConfirm);
 
@@ -64,14 +63,14 @@ public class RegisterServlet extends HttpServlet {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid account type");
             return;
         }
-
-        // SQL STATEMENTS FOR INSERTION
-        String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME, PWORD, ACCTYPEID) VALUES (?, ?, ?, ?, ?, ?)";
+        // SQL STATEMENT FOR INSERTION
+        String sqlUserAcc = "INSERT INTO USER_ACC (FNAME, LNAME, EMAIL, USERNAME, PWORD, ACCTYPEID) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseUtils.getConnection();
-             PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc, PreparedStatement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement stmtUserAcc = conn.prepareStatement(sqlUserAcc, new String[] { "USERID" })) {
 
-            // Insert into USER_ACC table
+            // Set parameters
             stmtUserAcc.setString(1, fname);
             stmtUserAcc.setString(2, lname);
             stmtUserAcc.setString(3, email);
@@ -80,57 +79,56 @@ public class RegisterServlet extends HttpServlet {
             stmtUserAcc.setInt(6, accType);
 
             // Execute the user account insertion
-            int rowsAffected = stmtUserAcc.executeUpdate();
-            if (rowsAffected == 0) {
-                throw new SQLException("Creating user account failed, no rows affected.");
+            int affectedRows = stmtUserAcc.executeUpdate();
+
+            if (affectedRows == 0) {
+                throw new SQLException("Creating user failed, no rows affected.");
+            }
+
+            // Retrieve the USERID
+            try (ResultSet generatedKeys = stmtUserAcc.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    long userId = generatedKeys.getLong(1);
+                    System.out.println("Generated USERID: " + userId);
+                } else {
+                    throw new SQLException("Creating user failed, no USERID obtained.");
+                }
             }
 
 
-            // Retrieve the generated user ID (if needed in your logic)
-            // ResultSet generatedKeys = stmtUserAcc.getGeneratedKeys();
-            // int userId = -1; // Default value
-            // if (generatedKeys.next()) {
-            //     userId = generatedKeys.getInt(1); // Assuming user ID is generated as an INT
-            // }
-//CLEAN
-
+            // Proceed with inserting into STUDENT or STAFF tables based on account type
             if (accType == 1) { // Student
                 String sqlInsertStudent = "INSERT INTO STUDENT (STUDENTID, FNAME, LNAME, EMAIL, PROGID, DEGREETYPEID, STUDYLEVELID, DEPTID, AWARDNAME) " +
                         "VALUES (TO_NUMBER('2' || student_id_seq.NEXTVAL), ?, ?, ?, ?, ?, ?, ?, ?)";
-                try (PreparedStatement stmtStudent = conn.prepareStatement(sqlInsertStudent)) {
-                    // Set the other parameters for the insert statement
-                    stmtStudent.setString(1, fname);        // First name
-                    stmtStudent.setString(2, lname);        // Last name
-                    stmtStudent.setString(3, email);        // Email
-                    stmtStudent.setString(4, progid);       // Program ID
-                    stmtStudent.setInt(5, degreetypeid);    // Degree Type ID
-                    stmtStudent.setInt(6, studylevelid);    // Study Level ID
-                    stmtStudent.setString(7, deptid);       // Department ID
-                    stmtStudent.setString(8, awardname);    // Award Name
 
-//                    stmtStudent.setInt(8, userId);
+                try (PreparedStatement stmtStudent = conn.prepareStatement(sqlInsertStudent)) {
+                    // Set the parameters for the student insert
+                    stmtStudent.setString(1, fname);
+                    stmtStudent.setString(2, lname);
+                    stmtStudent.setString(3, email);
+                    stmtStudent.setString(4, progid);
+                    stmtStudent.setInt(5, degreetypeid);
+                    stmtStudent.setInt(6, studylevelid);
+                    stmtStudent.setString(7, deptid);
+                    stmtStudent.setString(8, awardname);
 
                     stmtStudent.executeUpdate();
                 }
             } else if (accType == 2) { // Staff
-                // Insert into STAFF table
-                String sqlInsertStaff = "INSERT INTO STAFF (STAFFID, STAFFROLEID, EMAIL, FNAME, LNAME, DEPTID)" +
+                String sqlInsertStaff = "INSERT INTO STAFF (STAFFID, STAFFROLEID, EMAIL, FNAME, LNAME, DEPTID) " +
                         "VALUES (generate_staff_id(?, ?), ?, ?, ?, ?, ?)";
 
-
                 try (PreparedStatement stmtInsertStaff = conn.prepareStatement(sqlInsertStaff)) {
-                    // Set parameters for the staff insertion
-                    stmtInsertStaff.setString(1, fname); // First name
-                    stmtInsertStaff.setString(2, lname); // Last name
-                    stmtInsertStaff.setString(3, staffroleid); // Staff Role ID
-                    stmtInsertStaff.setString(4, email); // Email
-                    stmtInsertStaff.setString(5, fname); // First name
-                    stmtInsertStaff.setString(6, lname); // Last name
-                    stmtInsertStaff.setString(7, deptid); // Department ID
+                    // Set the parameters for the staff insert
+                    stmtInsertStaff.setString(1, fname);
+                    stmtInsertStaff.setString(2, lname);
+                    stmtInsertStaff.setString(3, staffroleid);
+                    stmtInsertStaff.setString(4, email);
+                    stmtInsertStaff.setString(5, fname);
+                    stmtInsertStaff.setString(6, lname);
+                    stmtInsertStaff.setString(7, deptid);
 
                     stmtInsertStaff.executeUpdate();
-
-
                 }
             }
 
@@ -175,7 +173,4 @@ public class RegisterServlet extends HttpServlet {
 
         return (firstInitial + lastFour + randomNumbers).toLowerCase();
     }
-
-
-
 }

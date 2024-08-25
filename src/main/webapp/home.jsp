@@ -28,6 +28,7 @@
 <div class="container">
     <div class="welcome-box">
         <h1 class="text-center">Welcome You are logged in to the cademic portal</h1>
+        <h1 class="text-center">your momtha is a FUCKIN MEATHEAD,</h1>
         <p class="text-center">Blah Blah fucking Blah</p>
 
 </div>
