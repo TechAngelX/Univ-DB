@@ -5,15 +5,18 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.mindrot.jbcrypt.BCrypt;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(); // Use default cost factor (10)
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
@@ -40,7 +43,6 @@ public class LoginServlet extends HttpServlet {
     }
 
     private boolean authenticateUser(String username, String password) throws SQLException {
-        boolean isValidUser = false;
         String sql = "SELECT PWORD FROM USER_ACC WHERE USERNAME = ?";
 
         try (Connection connection = DatabaseUtils.getConnection();
@@ -51,17 +53,13 @@ public class LoginServlet extends HttpServlet {
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     String storedPasswordHash = resultSet.getString("PWORD");
-                    if (BCrypt.checkpw(password, storedPasswordHash)) {
-                        isValidUser = true;
-                    } else {
-                        System.out.println("Password mismatch for user: " + username);
-                    }
+                    return passwordEncoder.matches(password, storedPasswordHash); // Use BCryptPasswordEncoder to check password
                 } else {
                     System.out.println("No user found with username: " + username);
+                    return false;
                 }
             }
         }
-        return isValidUser;
     }
 
     @Override

@@ -119,6 +119,13 @@
 </div>
 
 <script>
+    function convertToUppercase() {
+        var fname = document.getElementById('fname');
+        var lname = document.getElementById('lname');
+        fname.value = fname.value.toUpperCase();
+        lname.value = lname.value.toUpperCase();
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
         const accTypeSelect = document.getElementById("accType");
         const awardGroup = document.getElementById("award-group");
@@ -250,9 +257,13 @@
                 });
             })
             .catch(error => console.error('Error fetching departments:', error));
+
+        // Call convertToUppercase on form submission
+        const form = document.getElementById("registrationForm");
+        form.addEventListener("submit", function(event) {
+            convertToUppercase();
+        });
     });
-
-
 </script>
 </body>
 </html>
