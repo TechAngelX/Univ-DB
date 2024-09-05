@@ -3,7 +3,7 @@ package org.example.webapp;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class TestDatabaseConnection {
+public class TestDBConnection {
     public static void main(String[] args) {
         try {
             Connection conn = DatabaseUtils.getConnection();
